@@ -263,7 +263,6 @@ a {
 
   .hero_img {
     display: block;
-    height: 36vh;
     background-image: url(./img/mobile_home_cake.png);
   }
   .best_image {
