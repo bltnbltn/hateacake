@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web Design</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+    <nav class="navbar">
+      <div class="nav_logo">
+        <a href="#"><img src="./img/Logo.svg" alt=""></a>
+      </div>
+      <ol>
+        <span class="hamburger_menu">
+          <a href="#" onclick="openSideMenu()">
+            <img class="hambuger_icon" src="./img/Hamburger.svg" alt=""></a>
+        </span>
+        <ul class="navbar_menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">Cakes</a></li>
+          <li><a href="./about.html">About</a></li>
+      </ol>
+
+      </ul>
+      <ul class="navbar_icons">
+        <li><a href="#"><img src="./img/Search.svg" alt="Search icon"></a></li>
+        <li><a href="#"><img src="./img/Bag.svg" alt="Bag icon"></a></li>
+      </ul>
+    </nav>
+
+    <nav id="side_bar" class="side_nav">
+      <div class="closeBtn">
+        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+      </div>
+      <div id="side_menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Cakes</a></li>
+        <li><a href="./about.html">About</a></li>
+      </div>
+    </nav>
+
+    <div class="main">
+      <div class="hero_img">
+        <div class="header_box">
+          <h1>HATE A CAKE</h1>
+          <p>is a studio bakery specializing in signature and custom designed cakes catering for weddings,
+            birthdays,
+            showers and every other occasion.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="best_item">
+      <div class="best_title">
+        <h1>Best</h1>
+      </div>
+      <div class="best_image">
+        <div class="item_first">
+          <a href="rainbow.html"><img src="./img/Cake1.png" alt=""></a>
+          <h2>Rainbow Cake</h2>
+          <h3>$45.00</h2>
+        </div>
+        <div class="item_second">
+          <a href=""><img src="./img/Cake2.png" alt=""></a>
+          <h2>Chocolate Cake</h2>
+          <h3>$35.00</h2>
+        </div>
+        <div class="item_third">
+          <a href=""><img src="./img/Cake3.png" alt=""></a>
+          <h2>Adorable Cake</h2>
+          <h3>$35.00</h2>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="copyright">
+        <p>Copyright 2022 | ihateacake</p>
+        <p>All Rights Reserved.</p>
+      </div>
+      <div class="social_link">
+        <a href="#"><img src="./img/Instagram.svg" alt=""></a>
+        <a href="#"><img src="./img/Facebook.svg" alt=""></a>
+        <a href="#"><img src="./img/Pinterest.svg" alt=""></a>
+
+      </div>
+    </div>
+
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

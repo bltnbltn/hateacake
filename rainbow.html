@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Rainbow Cake</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar">
+      <div class="nav_logo">
+        <a href="#"><img src="./img/Logo.svg" alt=""></a>
+      </div>
+      <ol>
+        <span class="hamburger_menu">
+          <a href="#" onclick="openSideMenu()">
+            <img class="hambuger_icon" src="./img/Hamburger.svg" alt=""></a>
+        </span>
+        <ul class="navbar_menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./cakes.html">Cakes</a></li>
+          <li><a href="./about.html">About</a></li>
+      </ol>
+
+      </ul>
+      <ul class="navbar_icons">
+        <li><a href="#"><img src="./img/Search.svg" alt="Search icon"></a></li>
+        <li><a href="#"><img src="./img/Bag.svg" alt="Bag icon"></a></li>
+      </ul>
+    </nav>
+
+    <nav id="side_bar" class="side_nav">
+      <div class="closeBtn">
+        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+      </div>
+      <div id="side_menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./cakes.html">Cakes</a></li>
+        <li><a href="./about.html">About</a></li>
+      </div>
+    </nav>
+    <div class="order_item">
+      <div class="order_top">
+        <div class="order_img"><img src="./img/Rainbow.png" alt="">
+
+        </div>
+        <div class="order_detail">
+          <div class="order_detail_text">
+            <h1>Rainbow Cake</h1>
+            <h2>$45.00</h2>
+            <p>Layers of hazelnut meringue topped with delicate whipped cream and frozen blueberries and raspberries.
+              Cake
+              is frozen(like ice-cream cake),takes 4 hours to defrost In the fridge.Please call for more information
+              about
+              serving and storing </p>
+          </div>
+          <form class="detail_select">
+            <div class="select_size">
+              <label for="size">Size</label>
+              <select class="select_custom_icon" name="size" id="size" required>
+                <option value="" disabled selected hidden>Select Size</option>
+                <option value="1 piece">1 piece</option>
+                <option value="2 piece">2 piece</option>
+              </select>
+            </div>
+            <div class="select_flavour">
+              <label for="flavour">Flavour</label>
+              <select class="select_custom_icon" name="flavour" id="flavour" required>
+                <option value="" disabled selected hidden>Select Flavour</option>
+                <option value="">1</option>
+                <option value="">2</option>
+              </select>
+            </div>
+            <div class="select_decoration">
+              <label for="decoration">Decoration</label>
+              <select class="select_custom_icon" name="decoration" id="decoration" required>
+                <option value="" disabled selected hidden>Select Decoration</option>
+                <option value="">1</option>
+                <option value="">2</option>
+              </select>
+            </div>
+            <div class="select_quentity">
+              <label for="quentity">QTY</label>
+              <div class="quentity_selector">
+                <div class="decrease_quentity"></div>
+                <h1>1</h1>
+                <div class="increase_quentity"></div>
+              </div>
+            </div>
+            <div class="select_button">
+
+              <button class="select_buy">Buy it Now</button>
+              <div class="add_to_bag"><img src="./img/Bag.svg" alt=""></div>
+            </div>
+        </div>
+        </form>
+      </div>
+      <div class="order_bottom">
+
+        <div class="order_ingredient">
+          <p class="ingredient_title">Ingredients</p>
+          <p class="ingredient_list">Flour / Baking Powder / Salt / Butter / Sugar / Eggs / Buttermilk</p>
+        </div>
+        <div class="related_item">
+          <h1>Related Products</h1>
+          <div class="related_img">
+            <a href="#"></a><img src="./img/related1.png" alt="">
+            <a href="#"></a><img src="./img/related2.png" alt="">
+            <a href="#"></a><img src="./img/related3.png" alt="">
+          </div>
+        </div>
+        <div class="slider_nav">
+          <div class="circle_first circle"></div>
+          <div class="circle_second circle"></div>
+          <div class="circle_third circle"></div>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer">
+      <div class="copyright">
+        <p>Copyright 2022 | ihateacake</p>
+        <p>All Rights Reserved.</p>
+      </div>
+      <div class="social_link">
+        <a href="#"><img src="./img/Instagram.svg" alt=""></a>
+        <a href="#"><img src="./img/Facebook.svg" alt=""></a>
+        <a href="#"><img src="./img/Pinterest.svg" alt=""></a>
+
+      </div>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>
