@@ -179,7 +179,7 @@ a {
   background: rgba(255, 255, 255, 0.43);
   backdrop-filter: blur(6px);
   display: block;
-  padding-top: 14px;
+  padding: 20px 40px;
   text-align: center;
 }
 
