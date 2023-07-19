@@ -262,8 +262,9 @@ a {
   }
 
   .hero_img {
-    display: block;
+    display: flex;
     background-image: url(./img/mobile_home_cake.png);
+    height: 50vh;
   }
   .best_image {
     display: block;
@@ -272,7 +273,6 @@ a {
   }
 
   .header_box {
-    top: 130px;
     width: 320px;
     height: 194px;
   }
