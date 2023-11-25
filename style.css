@@ -57,6 +57,7 @@ p {
 }
 
 ol {
+  padding: 0;
   list-style: none;
 }
 
@@ -227,7 +228,6 @@ a {
   display: flex;
   justify-content: center;
   padding-top: 26px;
-  padding-bottom: 160px;
 }
 
 .item_first,
@@ -245,6 +245,7 @@ a {
   max-width: 1200px;
   margin: auto;
   padding: 0px 28px;
+  margin-top: 100px;
 }
 
 .footer p {
@@ -346,11 +347,11 @@ a {
 .order_top {
   display: flex;
   justify-content: center;
-  padding-top: 70px;
+  padding: 70px 0px;
 }
 
 .order_detail {
-  margin-left: 56px;
+  margin-left: 40px;
 }
 .order_detail_text h1 {
   font-family: Pretendard-Bold;
@@ -369,12 +370,8 @@ a {
   font-size: 14px;
   line-height: 26px;
 }
-.order_detail {
-  width: 372px;
-}
 
 .detail_select {
-  width: 100%;
   padding-top: 30px;
 }
 
@@ -420,6 +417,7 @@ option[value=''][disabled] {
 }
 
 .select_buy {
+  font-size: 16px;
   color: var(--white-text-color);
   background-color: var(--primary-color);
   width: 100%;
@@ -515,16 +513,11 @@ option[value=''][disabled] {
   justify-content: center;
 }
 
-.order_bottom {
-  margin-top: 160px;
-}
-
 .related_img {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
-  padding: 0 10px;
 }
 
 .related_img img {
@@ -534,10 +527,10 @@ option[value=''][disabled] {
 }
 
 .slider_nav {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
 }
 .circle_first {
   border-radius: 50%;
@@ -561,7 +554,6 @@ option[value=''][disabled] {
 @media screen and (max-width: 600px) {
   .order_top {
     display: block;
-    padding: 0px;
   }
 
   .order_detail {
@@ -573,7 +565,6 @@ option[value=''][disabled] {
   }
 
   .order_ingredient {
-    width: 90%;
     margin: auto;
     display: block;
   }
@@ -588,6 +579,7 @@ option[value=''][disabled] {
   }
 
   .order_bottom {
+    width: 100%;
     margin-top: 40px;
   }
 
@@ -613,14 +605,14 @@ option[value=''][disabled] {
 }
 
 .about_img {
-  width: 30%;
+  width: 360px;
   height: auto;
-
+  margin-right: -20px;
   z-index: 1;
 }
 
 .about_dis {
-  width: 40%;
+  width: 500px;
   background-color: rgb(248, 246, 246);
   padding: 40px;
 }
