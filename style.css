@@ -280,6 +280,11 @@ a {
     padding-bottom: 0;
   }
 
+  .best_image img {
+    width: 100%;
+    height: auto;
+  }
+  
   .header_box {
     width: 320px;
     height: 194px;
@@ -302,7 +307,7 @@ a {
   .item_first,
   .item_second,
   .item_third {
-    width: 282px;
+    width: 80%;
     margin: auto;
   }
 
