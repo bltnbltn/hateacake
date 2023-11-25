@@ -284,7 +284,7 @@ a {
     width: 100%;
     height: auto;
   }
-  
+
   .header_box {
     width: 320px;
     height: 194px;
@@ -319,7 +319,7 @@ a {
   }
 
   .social_link {
-    padding-top: 24px;
+    padding: 24px;
   }
 }
 
