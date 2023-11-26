@@ -262,7 +262,7 @@ a {
     height: 100vh;
     display: flex;
     margin: auto;
-    padding: 10rem;
+    padding: 100px 0px;
     border-bottom: 1px solid #e2e2e2;
   }
 
@@ -309,6 +309,7 @@ a {
   }
 
   .footer {
+    margin-top: 40px;
     display: block;
     justify-content: center;
     text-align: center;

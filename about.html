@@ -12,68 +12,56 @@
 <body>
   <div class="wrapper">
     <nav class="navbar">
+
       <div class="nav_logo">
         <a href="index.html"><img src="./img/Logo.svg" alt=""></a>
       </div>
-      <ol>
-        <span class="hamburger_menu">
-          <a href="#" onclick="openSideMenu()">
-            <img class="hambuger_icon" src="./img/Hamburger.svg" alt=""></a>
-        </span>
-        <ul class="navbar_menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./cakes.html">Cakes</a></li>
-          <li><a href="./about.html">About</a></li>
-      </ol>
 
+      <ul class="navbar_menu">
+        <li><a onclick="clickSingleA(this)" class="single" href="./index.html">Home</a></li>
+        <li><a onclick="clickSingleA(this)" class="single" href="./cakes.html">Cakes</a></li>
+        <li><a onclick="clickSingleA(this)" class="single" href="./about.html">About</a></li>
       </ul>
+
       <ul class="navbar_icons">
         <li><a href="#"><img src="./img/Search.svg" alt="Search icon"></a></li>
         <li><a href="#"><img src="./img/Bag.svg" alt="Bag icon"></a></li>
       </ul>
+
+      <a href="#" class="navbar_toggleBtn"><img src="./img/hambuger.svg" alt="">
+      </a>
     </nav>
+  </div>
+  <div class="order_item">
 
-    <nav id="side_bar" class="side_nav">
-      <div class="closeBtn">
-        <a href="#" class="btn-close" onclick="closeSideMenu()"><img class="hambuger_icon" src="./img/Hamburger.svg"
-            </a>
-      </div>
-      <div id="side_menu">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./cakes.html">Cakes</a></li>
-        <li><a href="./about.html">About</a></li>
-      </div>
-    </nav>
-    <div class="order_item">
+  </div>
 
+  <div class="about_main">
+    <img class="about_img" src="./img/about.jpg">
+    <div class="about_dis">
+      <h1>HOW A GAP YEAR AND A MOVIE CHANGED EVERYTHING</h1>
+      <p>Everything started the summer I was taking a year off from art school at Parsons. I had no clue what I’d do
+        with an art degree if I finished the program and was totally lost and looking for direction (and who isn’t at
+        19).</p>
+      <h1>THE MOMENT I KNEW</h1>
+      <p>After watching Julie and Julia my ever-supportive boyfriend bought me a copy of Mastering the Art of French
+        Cooking and I started baking from it. I found a passion but didn’t see myself working in a sweaty,
+        high-pressure kitchen and still had art on the mind. That’s when I saw an episode of Sweet Genius with Ron
+        Ben-Israel and everything fell into place. The second I saw his cakes in the background while pastry chefs
+        created edible pieces of art I thought, that’s what I’ll do.</p>
     </div>
-
-    <div class="about_main">
-      <img class="about_img" src="./img/about.jpg">
-      <div class="about_dis">
-        <h1>HOW A GAP YEAR AND A MOVIE CHANGED EVERYTHING</h1>
-        <p>Everything started the summer I was taking a year off from art school at Parsons. I had no clue what I’d do
-          with an art degree if I finished the program and was totally lost and looking for direction (and who isn’t at
-          19).</p>
-        <h1>THE MOMENT I KNEW</h1>
-        <p>After watching Julie and Julia my ever-supportive boyfriend bought me a copy of Mastering the Art of French
-          Cooking and I started baking from it. I found a passion but didn’t see myself working in a sweaty,
-          high-pressure kitchen and still had art on the mind. That’s when I saw an episode of Sweet Genius with Ron
-          Ben-Israel and everything fell into place. The second I saw his cakes in the background while pastry chefs
-          created edible pieces of art I thought, that’s what I’ll do.</p>
-      </div>
+  </div>
+  <div class="footer">
+    <div class="social_link">
+      <a href="#"><img src="./img/Instagram.svg" alt=""></a>
+      <a href="#"><img src="./img/Facebook.svg" alt=""></a>
+      <a href="#"><img src="./img/Pinterest.svg" alt=""></a>
     </div>
-    <div class="footer">
-      <div class="social_link">
-        <a href="#"><img src="./img/Instagram.svg" alt=""></a>
-        <a href="#"><img src="./img/Facebook.svg" alt=""></a>
-        <a href="#"><img src="./img/Pinterest.svg" alt=""></a>
-      </div>
-      <div class="copyright">
-        <p>Copyright 2022 | hateacake</p>
-        <p>All Rights Reserved.</p>
-      </div>
+    <div class="copyright">
+      <p>Copyright 2022 | hateacake</p>
+      <p>All Rights Reserved.</p>
     </div>
+  </div>
   </div>
   <script src="./main.js"></script>
 </body>
