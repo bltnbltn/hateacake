@@ -15,6 +15,13 @@ toggleBtn.addEventListener('click', (e) => {
   }
 });
 
-// // 네비게이션 바의 높이를 동적으로 계산하여 히어로 이미지에 적용
-const navbarHeight = document.querySelector('.navbar').offsetHeight;
-document.querySelector('.hero_img').style.marginTop = navbarHeight + 'px';
+window.addEventListener('resize', function () {
+  if (window.innerWidth <= 768) {
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+    console.log('Navbar Height:', navbarHeight);
+    document.querySelector('.hero_img').style.marginTop = navbarHeight + 'px';
+  } else {
+    console.log('Desktop Version');
+    document.querySelector('.hero_img').style.marginTop = '0';
+  }
+});
