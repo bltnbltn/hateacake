@@ -242,6 +242,7 @@ a {
 
   .navbar_toggleBtn {
     display: block;
+    cursor: pointer;
   }
 
   .navbar_menu {
