@@ -321,19 +321,6 @@ a {
   }
 }
 
-/* TABLET, 600px and ABOVE */
-@media screen and (min-width: 600px) {
-  .hamburger_menu {
-    display: none;
-  }
-}
-
-/* DESKTOP, 992px and ABOVE */
-@media screen and (min-width: 992px) {
-  .hamburger_menu {
-    display: none;
-  }
-}
 
 /* ----------------------------------RAINBOW----------------------------------  */
 .order_item {
