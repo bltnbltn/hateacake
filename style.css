@@ -84,7 +84,7 @@ a {
   background-color: var(--background-color);
 }
 
-/* Hambuger Menu */
+/* Hamburger Menu */
 .navbar_toggleBtn {
   display: none;
   position: absolute;
@@ -235,7 +235,7 @@ a {
     align-items: flex-start;
   }
 
-  /* Hambuger Menu */
+  /* Hamburger Menu */
   .navbar .navbar_toggleBtn {
     padding: 50px 0px;
   }
