@@ -12,119 +12,125 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    
-    <nav class="navbar">
 
-      <div class="nav_logo">
-        <a href="index.html"><img src="./img/Logo.svg" alt=""></a>
+
+  <nav class="navbar">
+
+    <div class="navbar__logo">
+      <a href="index.html"><img src="./img/logo.svg" alt=""></a>
+    </div>
+
+    <ul class="navbar__menu">
+      <li><a onclick="clickSingleA(this)" class="single" href="./index.html">Home</a></li>
+      <li><a onclick="clickSingleA(this)" class="single" href="#">Cakes</a></li>
+      <li><a onclick="clickSingleA(this)" class="single" href="./about.html">About</a></li>
+      <!-- 추가적인 메뉴 -->
+      <li class="additional-menu menu-divider"></li>
+      <li class="additional-menu">
+        <a onclick="clickSingleA(this)" class="single" href="#">My Order</a>
+      </li>
+    </ul>
+
+    <ul class="navbar__icons">
+      <li class="account-icon"><a href="#"><img src="./img/account.svg" alt="Account"></a></li>
+      <li class="search-icon"><a href="#"><img src="./img/search.svg" alt="search icon"></a></li>
+      <li class="bag-icon"><a href="#"><img src="./img/bag.svg" alt="bag icon"></a></li>
+      <a href="#" class="navbar__toggleBtn"><img src="./img/hamburger.svg" alt=""></a>
+    </ul>
+
+
+  </nav>
+
+
+  <div class="order">
+    <div class="order__top">
+      <div class="order__img""><img src=" ./img/rainbow.png" alt="">
       </div>
-
-      <ul class="navbar_menu">
-        <li><a onclick="clickSingleA(this)" class="single" href="./index.html">Home</a></li>
-        <li><a onclick="clickSingleA(this)" class="single" href="./cakes.html">Cakes</a></li>
-        <li><a onclick="clickSingleA(this)" class="single" href="./about.html">About</a></li>
-      </ul>
-
-      <ul class="navbar_icons">
-        <li><a href="#"><img src="./img/Search.svg" alt="Search icon"></a></li>
-        <li><a href="#"><img src="./img/Bag.svg" alt="Bag icon"></a></li>
-      </ul>
-
-      <a href="#" class="navbar_toggleBtn"><img src="./img/hamburger.svg" alt="">
-      </a>
-    </nav>
-
-  </div>
-  <div class="order_item">
-    <div class="order_top">
-      <div class="order_img"><img src="./img/Rainbow.png" alt="">
-
-      </div>
-      <div class="order_detail">
-        <div class="order_detail_text">
-          <h1>Rainbow Cake</h1>
-          <h2>$45.00</h2>
-          <p>Layers of hazelnut meringue topped with delicate whipped cream and frozen blueberries and raspberries.
-            Cake
-            is frozen(like ice-cream cake),takes 4 hours to defrost In the fridge.Please call for more information
-            about
-            serving and storing </p>
+      <div class="order__details">
+        <div class="order__details-text">
+          <h1 class="order__title">Rainbow Cake</h1>
+          <h2 class="order__price">$45.00</h2>
+          <p class="order__description">Layers of hazelnut meringue topped with delicate whipped cream and frozen
+            blueberries and raspberries. Cake is frozen(like ice-cream cake),takes 4 hours to defrost In the fridge.
+            Please call for more information about serving and storing.</p>
         </div>
-        <form class="detail_select">
-          <div class="select_size">
+        <form class="order__selection">
+          <div class="order__select-size">
             <label for="size">Size</label>
-            <select class="select_custom_icon" name="size" id="size" required>
+            <select class="order__select-custom-icon" name="size" id="size" required>
               <option value="" disabled selected hidden>Select Size</option>
               <option value="1 piece">1 piece</option>
               <option value="2 piece">2 piece</option>
             </select>
           </div>
-          <div class="select_flavour">
+          <div class="order__select-flavour">
             <label for="flavour">Flavour</label>
-            <select class="select_custom_icon" name="flavour" id="flavour" required>
+            <select class="order__select-custom-icon" name="flavour" id="flavour" required>
               <option value="" disabled selected hidden>Select Flavour</option>
               <option value="">1</option>
               <option value="">2</option>
             </select>
           </div>
-          <div class="select_decoration">
+          <div class="order__select-decoration">
             <label for="decoration">Decoration</label>
-            <select class="select_custom_icon" name="decoration" id="decoration" required>
+            <select class="order__select-custom-icon" name="decoration" id="decoration" required>
               <option value="" disabled selected hidden>Select Decoration</option>
               <option value="">1</option>
               <option value="">2</option>
             </select>
           </div>
-          <div class="select_quentity">
-            <label for="quentity">QTY</label>
-            <div class="quentity_selector">
-              <div class="decrease_quentity"><img src="./img/-.svg" alt=""></div>
+          <div class="order__select-quantity">
+            <label for="quantity">QTY</label>
+            <div class="order__quantity-selector">
+              <div class="order__decrease-quantity"><img src="./img/-.svg" alt=""></div>
               <h1>1</h1>
-              <div class="increase_quentity"><img src="./img/+.svg" alt=""></div>
+              <div class="order__increase-quantity"><img src="./img/+.svg" alt=""></div>
             </div>
           </div>
-          <div class="select_button">
-
-            <button class="select_buy">Buy it Now</button>
-            <div class="add_to_bag"><img src="./img/Bag.svg" alt=""></div>
+          <div class="order__select-button">
+            <button class="order__buy">Buy it Now</button>
+            <div class="order__add-to-bag"><img src="./img/Bag.svg" alt=""></div>
           </div>
-      </div>
-      </form>
-    </div>
-    <div class="order_bottom">
+        </form>
 
-      <div class="order_ingredient">
-        <p class="ingredient_title">Ingredients</p>
-        <p class="ingredient_list">Flour / Baking Powder / Salt / Butter / Sugar / Eggs / Buttermilk</p>
+
+
       </div>
-      <div class="related_item">
-        <h1>Related Products</h1>
-        <div class="related_img">
+    </div>
+
+    <div class="order__bottom">
+      <div class="order__ingredient">
+        <p class="order__ingredient-title">Ingredients</p>
+        <p class="order__ingredient-list">Flour / Baking Powder / Salt / Butter / Sugar / Eggs / Buttermilk</p>
+      </div>
+      <div class="order__related-item">
+        <h1 class="order__related-title">Related Products</h1>
+        <div class="order__related-img">
           <a href="#"><img src="./img/related1.png" alt=""></a>
           <a href="#"><img src="./img/related2.png" alt=""></a>
           <a href="#"><img src="./img/related3.png" alt=""></a>
         </div>
-      </div>
-      <div class="slider_nav">
-        <div class="circle_first circle"></div>
-        <div class="circle_second circle"></div>
-        <div class="circle_third circle"></div>
+        <div class="order__slider-nav">
+          <div class="order__circle-first dot-indicatior"></div>
+          <div class="order__circle-second dot-indicatior"></div>
+          <div class="order__circle-third dot-indicatior"></div>
+        </div>
       </div>
 
     </div>
-  </div>
-  <div class="footer">
-    <div class="social_link">
-      <a href="#"><img src="./img/Instagram.svg" alt=""></a>
-      <a href="#"><img src="./img/Facebook.svg" alt=""></a>
-      <a href="#"><img src="./img/Pinterest.svg" alt=""></a>
-    </div>
-    <div class="copyright">
-      <p>Copyright 2022 | hateacake</p>
-      <p>All Rights Reserved.</p>
-    </div>
-  </div>
+
+    <footer class="footer">
+      <div class="footer__social-link">
+        <a href="#"><img src="./img/instagram.svg" alt="instagram icon"></a>
+        <a href="#"><img src="./img/facebook.svg" alt="facebook icon"></a>
+        <a href="#"><img src="./img/pinterest.svg" alt="pinterest icon"></a>
+      </div>
+      <div class="footer__copyright">
+        <p>Copyright 2022 | hateacake</p>
+        <p>All Rights Reserved.</p>
+      </div>
+    </footer>
+
   </div>
   <script src="./main.js"></script>
 </body>

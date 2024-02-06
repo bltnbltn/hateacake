@@ -14,78 +14,84 @@
 
 <body>
 
-  <div class="wrapper">
+  <nav class="navbar">
 
-    <nav class="navbar">
+    <div class="navbar__logo">
+      <a href="index.html"><img src="./img/logo.svg" alt=""></a>
+    </div>
 
-      <div class="nav_logo">
-        <a href="index.html"><img src="./img/Logo.svg" alt=""></a>
-      </div>
+    <ul class="navbar__menu">
+      <li><a onclick="clickSingleA(this)" class="single" href="./index.html">Home</a></li>
+      <li><a onclick="clickSingleA(this)" class="single" href="#">Cakes</a></li>
+      <li><a onclick="clickSingleA(this)" class="single" href="./about.html">About</a></li>
+      <!-- 추가적인 메뉴 -->
+      <li class="additional-menu menu-divider"></li>
+      <li class="additional-menu">
+        <a onclick="clickSingleA(this)" class="single" href="#">My Order</a>
+      </li>
+    </ul>
 
-      <ul class="navbar_menu">
-        <li><a onclick="clickSingleA(this)" class="single" href="./index.html">Home</a></li>
-        <li><a onclick="clickSingleA(this)" class="single" href="./cakes.html">Cakes</a></li>
-        <li><a onclick="clickSingleA(this)" class="single" href="./about.html">About</a></li>
-      </ul>
+    <ul class="navbar__icons">
+      <li class="account-icon"><a href="#"><img src="./img/account.svg" alt="Account"></a></li>
+      <li class="search-icon"><a href="#"><img src="./img/search.svg" alt="search icon"></a></li>
+      <li class="bag-icon"><a href="#"><img src="./img/bag.svg" alt="bag icon"></a></li>
+      <a href="#" class="navbar__toggleBtn"><img src="./img/hamburger.svg" alt=""></a>
+    </ul>
 
-      <ul class="navbar_icons">
-        <li><a href="#"><img src="./img/Search.svg" alt="Search icon"></a></li>
-        <li><a href="#"><img src="./img/Bag.svg" alt="Bag icon"></a></li>
-      </ul>
 
-      <a href="#" class="navbar_toggleBtn"><img src="./img/hamburger.svg" alt="">
-      </a>
-    </nav>
+  </nav>
 
-  </div>
-
-  </div>
   <div class="main">
-    <div class="hero_img">
-      <div class="header_box">
-        <h1>HATE A CAKE</h1>
-        <p>is a studio bakery specializing in signature and custom designed cakes catering for weddings,
-          birthdays,
-          showers and every other occasion.</p>
+    <div class="main__hero-img">
+      <div class="main__header-box">
+        <h1 class="main__title">HATE A CAKE</h1>
+        <p class="main__description">is a studio bakery specializing in signature and custom designed cakes catering for
+          weddings,
+          birthdays,showers and every other occasion.</p>
       </div>
     </div>
   </div>
 
-  <div class="best_item">
-    <div class="best_title">
-      <h1>Best</h1>
+  <div class="best-item">
+
+    <div class="best-item__title">
+      <h1 class="best-item__heading">Best</h1>
     </div>
-    <div class="best_image">
-      <div class="item_first">
+
+    <div class="best-item__container">
+      <div class="best-item__item best-item__item--first">
         <a href="cakes.html"><img src="./img/Cake1.png" alt=""></a>
-        <h2>Rainbow Cake</h2>
-        <h3>$45.00</h2>
+        <h2 class="best-item__name">Rainbow Cake</h2>
+        <h3 class="best-item__price">$45.00</h3>
       </div>
-      <div class="item_second">
+
+      <div class="best-item__item best-item__item--second">
         <a href=""><img src="./img/Cake2.png" alt=""></a>
-        <h2>Chocolate Cake</h2>
-        <h3>$35.00</h2>
+        <h2 class="best-item__name">Chocolate Cake</h2>
+        <h3 class="best-item__price">$35.00</h3>
       </div>
-      <div class="item_third">
+
+      <div class="best-item__item best-item__item--third">
         <a href=""><img src="./img/Cake3.png" alt=""></a>
-        <h2>Adorable Cake</h2>
-        <h3>$35.00</h2>
+        <h2 class="best-item__name">Adorable Cake</h2>
+        <h3 class="best-item__price">$35.00</h3>
       </div>
     </div>
 
   </div>
 
-  <div class="footer">
-    <div class="social_link">
-      <a href="#"><img src="./img/Instagram.svg" alt=""></a>
-      <a href="#"><img src="./img/Facebook.svg" alt=""></a>
-      <a href="#"><img src="./img/Pinterest.svg" alt=""></a>
+  <footer class="footer">
+    <div class="footer__social-link">
+      <a href="#"><img src="./img/instagram.svg" alt="instagram icon"></a>
+      <a href="#"><img src="./img/facebook.svg" alt="facebook icon"></a>
+      <a href="#"><img src="./img/pinterest.svg" alt="pinterest icon"></a>
     </div>
-    <div class="copyright">
+    <div class="footer__copyright">
       <p>Copyright 2022 | hateacake</p>
       <p>All Rights Reserved.</p>
     </div>
-  </div>
+  </footer>
+
   <script src="./main.js"></script>
 </body>
 
