@@ -1,0 +1,84 @@
+/* ----------------------------------CAKES PAGE----------------------------------  */
+/* -----------------------Product-item */
+
+.product-item__container {
+  padding: 20px 0px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 26px;
+}
+
+.product-item__item {
+  padding: 26px;
+}
+
+.product-item__item img {
+  width: 100%;
+  height: auto;
+}
+
+.product-item__heading {
+  font-family: Pretendard Variable;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 36px;
+  padding: 60px 0px 0px 0px;
+  text-align: center;
+}
+
+.product-item__name {
+  font-family: Pretendard Variable;
+  font-weight: 600;
+  font-size: 18px;
+  padding-top: 10px;
+}
+.product-item__price {
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  font-size: 16px;
+  padding-top: 6px;
+}
+
+/* -----------------------Pagination*/
+
+.pagination__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+}
+
+.pagination__item {
+  margin: 18px;
+}
+
+.pagination__item img {
+  display: block;
+  margin: 0 auto;
+}
+
+.pagination__link--01 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  background-color: var(--primary-color);
+  color: var(--white-text-color);
+  border-radius: 4px;
+}
+
+/* MOBILE, ~ 767 */
+
+@media screen and (max-width: 767px) {
+  .product-item__container {
+    display: block;
+  }
+
+  .pagination__list {
+    padding: 0;
+  }
+}
