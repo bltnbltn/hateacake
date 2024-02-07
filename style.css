@@ -127,7 +127,7 @@ a {
 /* ------------------------------ Main */
 .main__hero-img {
   display: flex;
-  background: url('img/hero.png') no-repeat center / cover;
+  background: url('img/hero.jpg') no-repeat center / cover;
   padding: 130px;
 }
 
@@ -294,7 +294,7 @@ a {
   /* ------------------------------ Main */
   .main__hero-img {
     display: flex;
-    background: url('img/mobile_home_cake.png') no-repeat center / cover;
+    background: url('img/mobile_home_cake.jpg') no-repeat center / cover;
     padding: 60px 30px 180px 30px;
   }
 
