@@ -75,7 +75,13 @@
 
 @media screen and (max-width: 767px) {
   .product-item__container {
-    display: block;
+    flex-wrap: wrap; /* 자식 요소들이 넘칠 경우 여러 줄로 나열 */
+  }
+
+  .product-item__item {
+    width: 50%; /* 각 항목을 반 너비로 설정하여 두 개의 열로 표시 */
+    box-sizing: border-box; /* 패딩과 테두리를 포함한 전체 너비를 유지 */
+    padding: 16px;
   }
 
   .pagination__list {
