@@ -89,6 +89,9 @@ a {
 .menu-btn {
   padding: 10px 20px; /* 일반 상태의 패딩 */
 }
+.additional-menu {
+  padding: 10px 20px; /* 일반 상태의 패딩 */
+}
 
 .navbar__menu li:hover {
   background-color: #903d52;
