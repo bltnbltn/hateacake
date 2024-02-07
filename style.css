@@ -115,7 +115,7 @@ a {
 .main__hero-img {
   display: flex;
   background: url('img/hero.png') no-repeat center / cover;
-  height: 50vh;
+  padding: 50px 0px;
 }
 
 .main__header-box {
@@ -277,7 +277,7 @@ a {
 
   .main__header-box {
     width: 80%;
-    padding: 40px 20px;
+    padding: 40px;
   }
 
   .main__title {
