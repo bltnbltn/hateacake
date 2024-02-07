@@ -274,11 +274,11 @@ a {
   .main__hero-img {
     display: flex;
     background: url('img/mobile_home_cake.png') no-repeat center / cover;
-    padding: 80px 30px 140px 30px;
+    padding: 60px 30px 180px 30px;
   }
 
   .main__header-box {
-    padding: 14px 30px;
+    padding: 20px;
   }
 
   .main__title {
