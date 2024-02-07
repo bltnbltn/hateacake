@@ -126,6 +126,7 @@ a {
   transition: 0.6s all ease-in-out;
   background: rgba(255, 255, 255, 0.43);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* Safari 브라우저를 위한 접두사 추가 */
   display: block;
   padding: 80px;
   text-align: center;
@@ -272,7 +273,6 @@ a {
   /* ------------------------------ Main */
   .main__hero-img {
     display: flex;
-    background-image: url('./img/mobile_home_cake.png');
   }
 
   .main__header-box {
@@ -617,14 +617,14 @@ option[value=''][disabled] {
 }
 
 .about-main__img {
-  width: 360px;
+  width: 40%;
   height: auto;
   margin-right: -20px;
   z-index: 1;
 }
 
 .about-main__description {
-  width: 500px;
+  width: 50%;
   background-color: rgb(248, 246, 246);
   padding: 40px;
 }
@@ -651,10 +651,11 @@ option[value=''][disabled] {
   }
 
   .about-main__img {
-    width: 60%;
+    width: 100%;
     display: block;
     margin: -24px auto;
   }
+
   .about-main__description {
     width: 100%;
   }
