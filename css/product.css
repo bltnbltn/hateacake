@@ -2,62 +2,67 @@
 
 /* ------------------------------ Order */
 
-.order {
+.product-detail {
   color: var(--text-color);
   width: 100%;
   max-width: 816px;
   margin: auto;
 }
 
-.order__top {
+.product-detail__info {
   display: flex;
   justify-content: center;
   padding: 70px 0px;
 }
 
-.order__img {
+.product-detail__img {
   margin-right: 40px;
 }
 
-.order__details {
+.product-detail__img img {
+  width: 400px;
+  height: 400px;
+}
+
+.product-detail__text {
   flex: 1;
 }
 
-.order__title {
+.product-detail__title {
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.product-detail__price {
   font-family: Pretendard Variable;
   font-weight: 600;
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 28px;
 }
 
-.order__price {
+.product-detail__description {
   font-family: Pretendard Variable;
-  font-weight: 400;
-  font-size: 16px;
-  margin-bottom: 26px;
-}
-
-.order__description {
-  font-family: Pretendard Variable;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--border3-color);
   line-height: 26px;
 }
 
-.order__selection {
+.product-detail__selection {
   padding-top: 30px;
 }
 
-.order__select-size,
-.order__select-flavour,
-.order__select-decoration {
+.product-detail__select-size,
+.product-detail__select-flavour,
+.product-detail__select-packing {
   padding-bottom: 14px;
 }
 
-.order__select-size label,
-.order__select-flavour label,
-.order__select-decoration label,
-.order__select-quantity label {
+.product-detail__select-size label,
+.product-detail__select-flavour label,
+.product-detail__select-packing label,
+.product-detail__select-quantity label {
   font-family: Pretendard Variable;
   font-weight: 400;
   font-size: 16px;
@@ -65,7 +70,7 @@
   padding-bottom: 8px;
 }
 
-.order__selection select {
+.product-detail__selection select {
   width: 100%;
   height: 48px;
   border-style: solid 1px;
@@ -77,8 +82,8 @@
   font-weight: 400;
 }
 
-.order__select-custom-icon {
-  background-image: url('./img/select.svg');
+.product-detail__select-custom-icon {
+  background-image: url('../icon/select.svg');
   background-repeat: no-repeat;
   background-position: 96% 50%;
 }
@@ -92,7 +97,7 @@ option[value=''][disabled] {
   display: none;
 }
 
-.order__buy {
+.product-detail__buy {
   font-size: 16px;
   color: var(--white-text-color);
   background-color: var(--primary-color);
@@ -103,7 +108,7 @@ option[value=''][disabled] {
   cursor: pointer;
 }
 
-.order__add-to-bag {
+.product-detail__add-to-bag {
   width: 64px;
   height: 50px;
   display: flex;
@@ -114,17 +119,17 @@ option[value=''][disabled] {
   margin-left: 16px;
 }
 
-.order__add-to-bag img {
+.product-detail__add-to-bag img {
   width: 24px;
   height: 24px;
 }
 
-.order__select-button {
+.product-detail__select-button {
   display: flex;
   align-items: center;
 }
 
-.order__select-quantity {
+.product-detail__select-quantity {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,45 +137,36 @@ option[value=''][disabled] {
   padding: 8px 0px;
 }
 
-.order__quantity-selector h1 {
-  font-family: Pretendard Variable;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.order__quantity-selector {
+.product-detail__quantity-selector {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.order__quantity-selector h1 {
-  padding: 16px;
+.product-detail__quantity {
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  font-size: 16px;
+  width: 50px;
+  text-align: center;
 }
 
-.order__decrease-quantity,
-.order__increase-quantity {
-  width: 24px;
-  height: 24px;
-  border-radius: 2px;
+.product-detail__decrease-icon,
+.product-detail__quantity,
+.product-detail__increase-icon {
+  display: flex; /* Flexbox를 사용하여 요소를 수평으로 배치합니다. */
+  align-items: center; /* 수직 정렬을 중앙으로 설정합니다. */
+  justify-content: center; /* 수평 정렬을 중앙으로 설정합니다. */
 }
 
-.order__decrease-quantity {
-  background-color: var(--border1-color);
-}
-
-.order__increase-quantity {
-  background-color: var(--primary-color);
-}
-
-.order__ingredient {
+.product-detail__ingredient {
   display: flex;
   justify-content: start;
   border-bottom: 1px solid;
   padding-bottom: 39px;
 }
 
-.order__ingredient-title {
+.product-detail__ingredient-title {
   font-family: Pretendard Variable;
   font-weight: 600;
   font-size: 14px;
@@ -178,14 +174,14 @@ option[value=''][disabled] {
   padding-right: 52px;
 }
 
-.order__ingredient-list {
+.product-detail__ingredient-list {
   font-family: Pretendard Variable;
   font-weight: 400;
   font-size: 14px;
   color: var(--gray-text-color);
 }
 
-.order__related-title {
+.product-detail__related-title {
   font-family: Pretendard Variable;
   font-weight: 600;
   font-size: 16px;
@@ -194,89 +190,87 @@ option[value=''][disabled] {
   justify-content: center;
 }
 
-.order__related-img {
+.product-detail__related-img {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
 }
 
-.order__related-img img {
+.product-detail__related-img img {
   width: 100%;
   height: auto;
   padding: 0 10px;
 }
 
-.order__slider-nav {
+.product-detail__slider-nav {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.order__circle-first {
+.dot--active {
   border-radius: 50%;
   height: 12px;
   width: 12px;
+  margin: 15px;
   background-color: var(--primary-color);
 }
 
-.order__circle-second,
-.order__circle-third {
+.dot-indicatior {
   border-radius: 50%;
   height: 8px;
   width: 8px;
-  background-color: var(--border2-color);
-}
-
-.dot-indicatior {
   margin: 15px;
+  background-color: var(--border2-color);
 }
 
 /* MOBILE, ~ 767 */
 
 @media screen and (max-width: 767px) {
-  /* ------------------------------ Order */
-  .order__top {
+  /* ------------------------------ Product-detail */
+  .product-detail__info {
     display: block;
     padding: 0px 0px;
   }
 
-  .order__details {
+  .product-detail__text {
     width: 90%;
     margin: auto;
   }
-  .order__details-text {
+  .product-detail__description {
     padding-top: 18px;
   }
 
-  .order__ingredient {
+  .product-detail__ingredient {
     margin: auto;
     display: block;
   }
 
-  .order__img {
+  .product-detail__img {
     width: 100%;
+    height: auto;
     margin: auto;
     margin-top: 80px;
   }
 
-  .order__img img {
+  .product-detail__img img {
     width: 100%;
   }
 
-  .order__bottom {
+  .product-detail__bottom {
     width: 90%;
     margin: auto;
     margin-top: 40px;
   }
 
-  .order__ingredient-list {
+  .product-detail__ingredient-list {
     line-height: 26px;
     padding-top: 14px;
   }
 
-  .order__slider-nav {
+  .product-detail__slider-nav {
     padding-bottom: 65px;
   }
 }

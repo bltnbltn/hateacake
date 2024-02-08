@@ -48,6 +48,10 @@ a {
   color: var(--text-color);
 }
 
+ul {
+  padding: 0;
+}
+
 /* ---------------------------------HOME PAGE-----------------------------------  */
 
 /* ------------------------------ Nav Bar */
@@ -55,8 +59,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   margin: auto;
+  max-width: 1200px;
   background-color: var(--background-color);
 }
 
@@ -76,6 +80,7 @@ a {
 .navbar__menu {
   display: flex;
   list-style: none;
+  margin: auto;
   padding: 0px;
 }
 
@@ -100,15 +105,14 @@ a {
 }
 
 /* My order 메뉴 숨기기 */
-.additional-menu {
+.additional-menu,
+.menu-divider {
   display: none;
 }
 
 .menu-divider {
   width: 100%;
   border-bottom: 1px solid var(--border1-color);
-
-  margin-bottom: 10px;
 }
 
 .navbar__icons {
@@ -141,6 +145,7 @@ a {
   display: block;
   padding: 80px;
   text-align: center;
+  color: var(--text-color);
 }
 
 .main__title {
@@ -159,41 +164,43 @@ a {
 
 /* ------------------------------ Best Item */
 
-.best-item__container {
+.best-product__list {
   padding: 60px 0px;
   max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: center;
+  color: var(--text-color);
 }
 
-.best-item__item {
+.best-product__item {
   padding: 26px;
 }
 
-.best-item__item img {
+.best-product__item img {
   width: 100%;
   height: auto;
 }
 
-.best-item__heading {
+.best-product__heading {
   font-family: Pretendard Variable;
   font-weight: 600;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 20px;
+
   padding-top: 70px;
   text-align: center;
 }
 
-.best-item__name {
+.best-product__name {
+  font-family: Pretendard Variable;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 6px 0px;
+}
+
+.best-product__price {
   font-family: Pretendard Variable;
   font-weight: 600;
-  font-size: 18px;
-  padding-top: 10px;
-}
-.best-item__price {
-  font-family: Pretendard Variable;
-  font-weight: 400;
   font-size: 16px;
   padding-top: 6px;
 }
@@ -265,7 +272,7 @@ a {
   }
 
   .navbar__menu li a {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .navbar__menu.active {
@@ -312,18 +319,18 @@ a {
 
   /* ------------------------------ Best Item */
 
-  .best-item__container {
+  .best-product__list {
     display: block;
     align-items: center;
     padding-bottom: 0;
   }
 
-  .best-item__item img {
+  .best-product__item img {
     width: 100%;
     height: auto;
   }
 
-  .best-item__item {
+  .best-product__item {
     width: 80%;
     margin: auto;
   }
@@ -339,17 +346,5 @@ a {
 
   .footer__social-link {
     padding: 24px;
-  }
-
-  .product-item__container {
-    max-width: 1200px;
-    margin: auto;
-    display: block;
-    justify-content: center;
-    padding-top: 26px;
-  }
-
-  .product-item__heading {
-    margin-top: 100px;
   }
 }

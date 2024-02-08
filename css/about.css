@@ -1,36 +1,36 @@
 /* ----------------------------------ABOUT PAGE----------------------------------  */
 
-.about-main {
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1200px;
   margin: auto;
   padding: 60px 0px;
-  margin-top: 80px;
+  color: var(--text-color);
 }
 
-.about-main__img {
-  width: 40%;
+.about__img {
+  width: 50%;
   height: auto;
   margin-right: -20px;
   z-index: 1;
 }
 
-.about-main__description {
+.about__description {
   width: 50%;
   background-color: rgb(248, 246, 246);
   padding: 40px;
 }
 
-.about-main__title {
+.about__title {
   font-family: YgroSans-Medium;
   font-size: 18px;
   line-height: 20px;
   padding-bottom: 10px;
 }
 
-.about-main__text {
+.about__body {
   font-family: YgroSans-Book;
   font-size: 14px;
   line-height: 20px;
@@ -40,17 +40,16 @@
 /* MOBILE, ~ 767 */
 
 @media screen and (max-width: 767px) {
-  .about-main {
+  .about {
     display: block;
   }
 
-  .about-main__img {
+  .about__img {
     width: 100%;
     display: block;
-    margin: -24px auto;
   }
 
-  .about-main__description {
+  .about__description {
     width: 100%;
   }
 }

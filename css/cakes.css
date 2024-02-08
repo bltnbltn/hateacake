@@ -2,16 +2,15 @@
 /* -----------------------Product-item */
 
 .product-item__container {
-  padding: 20px 0px;
   max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: center;
-  padding-top: 26px;
+  padding-bottom: 26px;
 }
 
 .product-item__item {
-  padding: 26px;
+  padding: 10px;
 }
 
 .product-item__item img {
@@ -19,25 +18,25 @@
   height: auto;
 }
 
-.product-item__heading {
+.product__heading h1 {
   font-family: Pretendard Variable;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 30px;
   line-height: 36px;
-  padding: 60px 0px 0px 0px;
+  padding: 60px 0px;
   text-align: center;
 }
 
 .product-item__name {
   font-family: Pretendard Variable;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
   padding-top: 10px;
 }
 .product-item__price {
   font-family: Pretendard Variable;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 18px;
   padding-top: 6px;
 }
 
@@ -52,7 +51,7 @@
 }
 
 .pagination__item {
-  margin: 18px;
+  margin: 14px;
 }
 
 .pagination__item img {
@@ -76,6 +75,7 @@
 @media screen and (max-width: 767px) {
   .product-item__container {
     flex-wrap: wrap; /* 자식 요소들이 넘칠 경우 여러 줄로 나열 */
+    padding: 0px;
   }
 
   .product-item__item {
@@ -85,6 +85,6 @@
   }
 
   .pagination__list {
-    padding: 0;
+    padding: 0px;
   }
 }
