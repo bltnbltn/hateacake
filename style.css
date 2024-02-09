@@ -56,8 +56,8 @@ ul {
 
 /* ------------------------------ Nav Bar */
 .navbar {
-  height: 150px;
   display: flex;
+  height: 150px;
   justify-content: space-between;
   align-items: center;
   margin: auto;
@@ -372,5 +372,9 @@ ul {
 
   .footer__social-link {
     padding: 24px;
+  }
+
+  body {
+    padding-top: 150px;
   }
 }

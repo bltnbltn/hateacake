@@ -1,7 +1,17 @@
+// -------------------Search Bar---------------------- //
+
 // 검색 아이콘을 클릭했을 때 활성화/비활성화 상태를 토글하는 함수
-document.querySelector('.search-icon').addEventListener('click', function () {
-  document.querySelector('.search-bar').classList.toggle('active');
-});
+document
+  .querySelector('.search-icon')
+  .addEventListener('click', function (event) {
+    // 기본 동작 중지
+    event.preventDefault();
+
+    // 검색 바의 활성화/비활성화 상태 토글
+    document.querySelector('.search-bar').classList.toggle('active');
+  });
+
+// -------------------Hamburger Menu---------------------- //
 
 // 네비게이션 메뉴 토글 버튼, 메뉴, 네비게이션 바, 추가 메뉴 선택
 const toggleBtn = document.querySelector('.navbar__toggleBtn');
@@ -15,21 +25,8 @@ toggleBtn.addEventListener('click', handleMenuToggle);
 function handleMenuToggle(e) {
   e.preventDefault();
   const isActive = menu.classList.toggle('active');
-  navbar.style.position = isActive ? 'absolute' : 'fixed';
-  navbar.style.top = isActive ? '0' : '';
 }
 
-// 초기 로드 시 및 창 크기 조정 시 메인 콘텐츠의 위치 조정
-const mainContent = document.querySelector('.top-content');
-const navbarHeight = navbar.offsetHeight;
-
-window.addEventListener('DOMContentLoaded', updateContentPosition);
-window.addEventListener('resize', updateContentPosition);
-
-function updateContentPosition() {
-  mainContent.style.marginTop =
-    window.innerWidth <= 768 ? navbarHeight + 'px' : '0';
-}
 
 // 수량 카운팅
 const decreaseBtn = document.querySelector('.product-detail__decrease-icon');
