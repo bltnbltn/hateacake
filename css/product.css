@@ -250,13 +250,14 @@ option[value=''][disabled] {
 
   .product-detail__img {
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: auto;
     margin-top: 80px;
   }
 
   .product-detail__img img {
     width: 100%;
+    height: auto;
   }
 
   .product-detail__bottom {

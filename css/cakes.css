@@ -19,7 +19,7 @@
 }
 
 .product__heading h1 {
-  font-family: Pretendard Variable;
+  font-family: YgroSans-Medium;
   font-weight: 600;
   font-size: 30px;
   line-height: 36px;
@@ -29,15 +29,14 @@
 
 .product-item__name {
   font-family: Pretendard Variable;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
-  padding-top: 10px;
+  padding: 8px 0px;
 }
 .product-item__price {
   font-family: Pretendard Variable;
   font-weight: 600;
   font-size: 18px;
-  padding-top: 6px;
 }
 
 /* -----------------------Pagination*/
