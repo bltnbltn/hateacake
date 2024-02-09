@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../css/product.css">
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <title>HATE A CAKE</title>
 
@@ -115,20 +115,36 @@
         <p class="product-detail__ingredient-title">Ingredients</p>
         <p class="product-detail__ingredient-list">Flour / Baking Powder / Salt / Butter / Sugar / Eggs / Buttermilk</p>
       </div>
-      <div class="product-detail__related-item">
+
+      <div class="product-detail__related-product">
         <h1 class="product-detail__related-title">Related Products</h1>
-        <div class="product-detail__related-img">
-          <a href="#"><img src="../img/related1.jpg" alt=""></a>
-          <a href="#"><img src="../img/related2.jpg" alt=""></a>
-          <a href="#"><img src="../img/related3.jpg" alt=""></a>
+        <div class="carousel-container">
+          <button id="prevBtn"><span class="material-icons chavron-left">
+              arrow_back_ios
+            </span>
+          </button>
+          <div class="carousel">
+            <div class="slide-group current-slide-group">
+              <div class="slide current-slide"><img src="../img/related1.jpg" alt=""></div>
+              <div class="slide "><img src="../img/related2.jpg" alt=""></div>
+              <div class="slide"><img src="../img/related3.jpg" alt=""></div>
+            </div>
+            <div class="slide-group second-slide-group">
+              <div class="slide"><img src="../img/cake04.jpg" alt=""></div>
+              <div class="slide"><img src="../img/cake02.jpg" alt=""></div>
+              <div class="slide"><img src="../img/cake03.jpg" alt=""></div>
+            </div>
+          </div>
+          <button id="nextBtn"><span class="material-icons chavron-right">
+              arrow_forward_ios
+            </span></button>
         </div>
-        <div class="product-detail__slider-nav">
-          <div class="dot--active"></div>
-          <div class="dot-indicatior"></div>
-          <div class="dot-indicatior"></div>
+
+        <div class="dot-container">
+          <div class="dot-indicator dot--active"></div>
+          <div class="dot-indicator"></div>
         </div>
       </div>
-
     </div>
 
 

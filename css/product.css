@@ -73,19 +73,26 @@
 .product-detail__selection select {
   width: 100%;
   height: 48px;
+  font-size: 14px;
+  color: var(--text-color);
+  font-family: Pretendard Variable;
+  font-weight: 400;
   border-style: solid 1px;
   border-color: var(--border2-color);
   border-radius: 4px;
   -webkit-appearance: none;
-  font-size: 14px;
-  font-family: Pretendard Variable;
-  font-weight: 400;
 }
 
 .product-detail__select-custom-icon {
   background-image: url('../icon/select.svg');
   background-repeat: no-repeat;
   background-position: 96% 50%;
+  padding-left: 10px;
+}
+
+select:focus {
+  border: 3px solid var(--primary-color); /* 포커스 시 테두리 색상 변경 */
+  outline: none; /* 기본 포커스 효과 제거 */
 }
 
 select:required:invalid {
@@ -134,7 +141,7 @@ option[value=''][disabled] {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 8px 0px;
+  padding: 16px 0px;
 }
 
 .product-detail__quantity-selector {
@@ -190,24 +197,71 @@ option[value=''][disabled] {
   justify-content: center;
 }
 
-.product-detail__related-img {
+/* carousel */
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#prevBtn,
+#nextBtn {
+  z-index: 999;
+  background-color: #fff;
+  width: 36px;
+  border: 0;
+}
+
+.chavron-left {
+  color: var(--border1-color);
+}
+
+.chavron-right {
+  color: var(--text-color);
+}
+
+.carousel {
+  padding: 10px;
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  transition: transform 0.5s ease;
 }
 
-.product-detail__related-img img {
+.slide-group {
+  display: flex;
+}
+
+.carousel img {
   width: 100%;
   height: auto;
   padding: 0 10px;
 }
 
-.product-detail__slider-nav {
-  margin-top: 20px;
+.second-slide-group {
+  position: absolute;
+  transform: translateX(729px);
+}
+
+.current-slide-group {
+  width: 100%;
+}
+
+.dot-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 10px;
+}
+
+.dot-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--border2-color);
+  margin: 15px;
+  cursor: pointer;
 }
 
 .dot--active {
@@ -216,14 +270,6 @@ option[value=''][disabled] {
   width: 12px;
   margin: 15px;
   background-color: var(--primary-color);
-}
-
-.dot-indicatior {
-  border-radius: 50%;
-  height: 8px;
-  width: 8px;
-  margin: 15px;
-  background-color: var(--border2-color);
 }
 
 /* MOBILE, ~ 767 */
@@ -271,7 +317,7 @@ option[value=''][disabled] {
     padding-top: 14px;
   }
 
-  .product-detail__slider-nav {
+  .dot-container {
     padding-bottom: 65px;
   }
 }
