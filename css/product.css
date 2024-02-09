@@ -161,9 +161,9 @@ option[value=''][disabled] {
 .product-detail__decrease-icon,
 .product-detail__quantity,
 .product-detail__increase-icon {
-  display: flex; /* Flexbox를 사용하여 요소를 수평으로 배치합니다. */
-  align-items: center; /* 수직 정렬을 중앙으로 설정합니다. */
-  justify-content: center; /* 수평 정렬을 중앙으로 설정합니다. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-detail__ingredient {
@@ -223,11 +223,14 @@ option[value=''][disabled] {
 }
 
 .carousel {
-  padding: 10px;
   width: 100%;
   height: auto;
   display: flex;
   transition: transform 0.5s ease;
+}
+
+.slide {
+  display: flex;
 }
 
 .slide-group {
@@ -242,11 +245,7 @@ option[value=''][disabled] {
 
 .second-slide-group {
   position: absolute;
-  transform: translateX(729px);
-}
-
-.current-slide-group {
-  width: 100%;
+  transform: translateX(0); /* 수정된 부분 */
 }
 
 .dot-container {

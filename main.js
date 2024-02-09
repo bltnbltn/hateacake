@@ -92,6 +92,25 @@ document.addEventListener('DOMContentLoaded', function () {
     updateDots(index);
   }
 
+  // 미디어 쿼리 매치 상태 확인 함수
+  function checkMediaQuery() {
+    return window.matchMedia('(max-width: 767px)').matches;
+  }
+
+  // 모바일 화면인 경우 translateX() 값을 동적으로 조정하는 함수
+  function adjustTranslateX() {
+    const slideWidth = slideGroups[0].getBoundingClientRect().width;
+    const offset = checkMediaQuery() ? slideWidth : 740; // 모바일인 경우 slideWidth로 설정, 아닌 경우 729로 설정
+    const secondSlideGroup = document.querySelector('.second-slide-group');
+    secondSlideGroup.style.transform = `translateX(${offset}px)`;
+  }
+
+  // 페이지 로드 시 초기화 함수 호출
+  window.addEventListener('load', adjustTranslateX);
+
+  // 윈도우 리사이즈 시 translateX() 값을 조정하는 이벤트 리스너 추가
+  window.addEventListener('resize', adjustTranslateX);
+
   function updateDots(index) {
     dots.forEach((dot) => dot.classList.remove('dot--active'));
     dots[index].classList.add('dot--active');
