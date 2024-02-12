@@ -212,6 +212,7 @@ option[value=''][disabled] {
   background-color: #fff;
   width: 36px;
   border: 0;
+  padding: 0;
 }
 
 .chavron-left {
@@ -245,12 +246,12 @@ option[value=''][disabled] {
 
 .second-slide-group {
   position: absolute;
-  transform: translateX(0); /* 수정된 부분 */
 }
 
 .dot-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 10px;
 }
 

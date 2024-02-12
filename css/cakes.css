@@ -1,16 +1,13 @@
 /* ----------------------------------CAKES PAGE----------------------------------  */
 /* -----------------------Product-item */
 
-.product-item__container {
+.product-item__grid {
   max-width: 1200px;
-  margin: auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4개의 열 */
+  gap: 24px; /* 아이템 간 간격 */
   justify-content: center;
-  padding-bottom: 26px;
-}
-
-.product-item__item {
-  padding: 10px;
+  margin: 60px auto;
 }
 
 .product-item__item img {
@@ -23,7 +20,7 @@
   font-weight: 600;
   font-size: 30px;
   line-height: 36px;
-  padding: 60px 0px;
+  margin-top: 70px;
   text-align: center;
 }
 
@@ -31,7 +28,7 @@
   font-family: Pretendard Variable;
   font-weight: 300;
   font-size: 18px;
-  padding: 8px 0px;
+  margin: 8px 0px;
 }
 .product-item__price {
   font-family: Pretendard Variable;
@@ -72,18 +69,22 @@
 /* MOBILE, ~ 767 */
 
 @media screen and (max-width: 767px) {
-  .product-item__container {
-    flex-wrap: wrap; /* 자식 요소들이 넘칠 경우 여러 줄로 나열 */
-    padding: 0px;
+  .product-item__grid {
+    grid-template-columns: repeat(2, 1fr); /* 2개의 열 */
+    gap: 16px;
   }
 
-  .product-item__item {
-    width: 50%; /* 각 항목을 반 너비로 설정하여 두 개의 열로 표시 */
-    box-sizing: border-box; /* 패딩과 테두리를 포함한 전체 너비를 유지 */
-    padding: 16px;
+  .product__heading h1 {
+    margin-top: 30px;
   }
 
-  .pagination__list {
-    padding: 0px;
+  /* 1행 좌측에만 패딩 주기 */
+  .product-item__item:nth-child(odd) {
+    margin-left: 16px;
+  }
+
+  /* 2행 우측에만 패딩 주기 */
+  .product-item__item:nth-child(even) {
+    margin-right: 16px;
   }
 }

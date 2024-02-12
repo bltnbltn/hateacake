@@ -5,8 +5,7 @@
   justify-content: center;
   align-items: center;
   max-width: 1200px;
-  margin: auto;
-  padding: 60px 0px;
+  margin: 60px auto;
   color: var(--text-color);
 }
 
@@ -27,14 +26,14 @@
   font-family: YgroSans-Medium;
   font-size: 18px;
   line-height: 20px;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .about__body {
   font-family: YgroSans-Book;
   font-size: 14px;
   line-height: 20px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 /* MOBILE, ~ 767 */
@@ -42,6 +41,7 @@
 @media screen and (max-width: 767px) {
   .about {
     display: block;
+    margin: 0;
   }
 
   .about__img {
