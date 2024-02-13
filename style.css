@@ -14,14 +14,12 @@
 
 /* ------------------------------ Colours */
 :root {
-  --text-color: #101010;
+  --text-color: #202020;
   --white-text-color: #fff;
-  --background-color: #fff;
-  --accent-color: #ede9e7;
   --gray-text-color: #ababab;
   --border1-color: #f1f0f0;
   --border2-color: #cdced4;
-  --border3-color: #383838;
+  --dark-gray-text-color: #636363;
   --primary-color: #7658cc;
 }
 
@@ -62,7 +60,7 @@ ul {
   align-items: center;
   margin: auto;
   max-width: 1200px;
-  background-color: var(--background-color);
+  background-color: #fff;
   padding: 0 16px;
 }
 
@@ -193,6 +191,7 @@ ul {
 /* ------------------------------ Best Item */
 .best-product {
   padding: 120px 0px;
+  color: var(--text-color);
 }
 
 .best-product__list {
@@ -201,7 +200,6 @@ ul {
   margin: auto;
   max-width: 1200px;
   gap: 30px;
-  color: var(--text-color);
   padding: 0 16px;
 }
 
@@ -221,15 +219,16 @@ ul {
 
 .best-product__name {
   font-family: Pretendard Variable;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 16px;
   margin: 8px 0px;
 }
 
 .best-product__price {
   font-family: Pretendard Variable;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 16px;
+  letter-spacing: 0.5px;
 }
 
 /* ------------------------------ Footer */
@@ -242,6 +241,7 @@ ul {
   max-width: 1200px;
   margin: auto;
   padding: 0 16px;
+  border-top: 1px solid var(--border1-color);
 }
 
 .footer__copyright {
@@ -259,6 +259,8 @@ ul {
 }
 
 .footer__social-link img {
+  width: 24px;
+  height: 24px;
   margin: 12px;
 }
 

@@ -3,6 +3,7 @@
 /* -----------------------Product-item */
 .product {
   padding: 0 30px;
+  color: var(--text-color);
 }
 
 .product-item__grid {
@@ -31,14 +32,15 @@
 
 .product-item__name {
   font-family: Pretendard Variable;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 18px;
   margin: 8px 0px;
 }
 .product-item__price {
   font-family: Pretendard Variable;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 18px;
+  letter-spacing: 0.5px;
 }
 
 /* -----------------------Pagination*/

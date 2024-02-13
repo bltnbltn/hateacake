@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // 모바일 화면인 경우 translateX() 값을 동적으로 조정하는 함수
   function adjustTranslateX() {
     const slideWidth = slideGroups[0].getBoundingClientRect().width;
-    const offset = checkMediaQuery() ? slideWidth : 740; // 모바일인 경우 slideWidth로 설정, 아닌 경우 729로 설정
+    const offset = checkMediaQuery() ? slideWidth : 780; //
     const secondSlideGroup = document.querySelector('.second-slide-group');
     secondSlideGroup.style.transform = `translateX(${offset}px)`;
   }

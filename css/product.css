@@ -5,8 +5,9 @@
 .product-detail {
   color: var(--text-color);
   width: 100%;
-  max-width: 816px;
+  max-width: 840px;
   margin: auto;
+  padding: 40px 0px;
 }
 
 .product-detail__info {
@@ -30,22 +31,26 @@
 
 .product-detail__title {
   font-family: Pretendard Variable;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 24px;
   margin-bottom: 14px;
 }
 
 .product-detail__price {
   font-family: Pretendard Variable;
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 300;
+  font-size: 20px;
   margin-bottom: 28px;
 }
 
 .product-detail__description {
   font-family: Pretendard Variable;
   font-weight: 300;
-  color: var(--border3-color);
+  color: var(--text-color);
+}
+
+.product-detail__body {
+  color: var(--dark-gray-text-color);
   line-height: 26px;
 }
 
@@ -62,12 +67,18 @@
 .product-detail__select-size label,
 .product-detail__select-flavour label,
 .product-detail__select-packing label,
-.product-detail__select-quantity label {
+.qty {
+  display: flex;
   font-family: Pretendard Variable;
   font-weight: 400;
   font-size: 16px;
-  display: block;
   padding-bottom: 8px;
+}
+
+.qty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-detail__selection select {
@@ -169,8 +180,8 @@ option[value=''][disabled] {
 .product-detail__ingredient {
   display: flex;
   justify-content: start;
-  border-bottom: 1px solid;
-  padding-bottom: 39px;
+  border-bottom: 1px solid var(--border2-color);
+  padding-bottom: 40px;
 }
 
 .product-detail__ingredient-title {
