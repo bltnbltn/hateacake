@@ -1,11 +1,15 @@
 /* ----------------------------------CAKES PAGE----------------------------------  */
+
 /* -----------------------Product-item */
+.product {
+  padding: 0 30px;
+}
 
 .product-item__grid {
   max-width: 1200px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4개의 열 */
-  gap: 24px; /* 아이템 간 간격 */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
   justify-content: center;
   margin: 60px auto;
 }
@@ -13,6 +17,7 @@
 .product-item__item img {
   width: 100%;
   height: auto;
+  border-radius: 4px;
 }
 
 .product__heading h1 {
@@ -20,7 +25,7 @@
   font-weight: 600;
   font-size: 30px;
   line-height: 36px;
-  margin-top: 70px;
+  margin-top: 120px;
   text-align: center;
 }
 
@@ -44,6 +49,7 @@
   align-items: center;
   font-family: Pretendard Variable;
   font-weight: 400;
+  margin: 80px 0px 120px 0px;
 }
 
 .pagination__item {
@@ -69,6 +75,10 @@
 /* MOBILE, ~ 767 */
 
 @media screen and (max-width: 767px) {
+  .product {
+    padding: 0;
+  }
+
   .product-item__grid {
     grid-template-columns: repeat(2, 1fr); /* 2개의 열 */
     gap: 16px;

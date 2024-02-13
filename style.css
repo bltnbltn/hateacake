@@ -57,7 +57,7 @@ ul {
 /* ------------------------------ Nav Bar */
 .navbar {
   display: flex;
-  height: 130px;
+  height: 120px;
   justify-content: space-between;
   align-items: center;
   margin: auto;
@@ -83,6 +83,7 @@ ul {
   list-style: none;
   margin: auto;
   padding: 0px;
+  left: 0;
 }
 
 .navbar__menu li {
@@ -172,6 +173,7 @@ ul {
   padding: 80px;
   text-align: center;
   color: var(--text-color);
+  border-radius: 20px;
 }
 
 .main__title {
@@ -190,7 +192,7 @@ ul {
 
 /* ------------------------------ Best Item */
 .best-product {
-  padding: 100px;
+  padding: 120px 0px;
 }
 
 .best-product__list {
@@ -198,13 +200,15 @@ ul {
   justify-content: center;
   margin: auto;
   max-width: 1200px;
-  gap: 24px;
+  gap: 30px;
   color: var(--text-color);
+  padding: 0 16px;
 }
 
 .best-product__item img {
   width: 100%;
   height: auto;
+  border-radius: 4px;
 }
 
 .best-product__heading h1 {
@@ -347,7 +351,9 @@ ul {
   /* ------------------------------ Best Item */
 
   .best-product {
-    padding: 60px;
+    width: 80%;
+    margin: auto;
+    padding: 80px 0px;
   }
 
   .best-product__list {
@@ -371,6 +377,6 @@ ul {
   }
 
   body {
-    padding-top: 130px;
+    padding-top: 120px;
   }
 }
