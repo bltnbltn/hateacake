@@ -56,6 +56,8 @@
 
 .product-detail__selection {
   padding-top: 30px;
+  font-family: Pretendard Variable;
+  font-weight: 400;
 }
 
 .product-detail__select-size,
@@ -66,11 +68,8 @@
 
 .product-detail__select-size label,
 .product-detail__select-flavour label,
-.product-detail__select-packing label,
-.qty {
+.product-detail__select-packing label {
   display: flex;
-  font-family: Pretendard Variable;
-  font-weight: 400;
   font-size: 16px;
   padding-bottom: 8px;
 }
@@ -170,11 +169,12 @@ option[value=''][disabled] {
 }
 
 .product-detail__decrease-icon,
-.product-detail__quantity,
 .product-detail__increase-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 24px;
+  height: 24px;
 }
 
 .product-detail__ingredient {
