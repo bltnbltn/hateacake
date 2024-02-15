@@ -235,6 +235,7 @@ ul {
 .footer {
   width: 100%;
   border-top: 1px solid var(--border1-color);
+  padding: 40px;
 }
 
 .footer__container {
@@ -244,11 +245,9 @@ ul {
   height: 100px;
   max-width: 1200px;
   margin: auto;
-  padding: 0 16px;
 }
 
 .footer__copyright {
-  margin: 16px;
   font-family: Pretendard Variable;
   font-weight: 300;
   font-size: 12px;
@@ -374,8 +373,7 @@ ul {
   }
 
   /* ------------------------------ Footer */
-
-  .footer {
+  .footer__container {
     display: block;
     justify-content: center;
     text-align: center;
