@@ -16,7 +16,7 @@
 :root {
   --text-color: #202020;
   --white-text-color: #fff;
-  --gray-text-color: #ababab;
+  --gray-text-color: #a5a5a5;
   --border1-color: #f1f0f0;
   --border2-color: #cdced4;
   --dark-gray-text-color: #636363;
@@ -143,12 +143,17 @@ ul {
 }
 
 .search-bar input[type='text'] {
+  color: var(--text-color);
+  font-size: 16px;
   flex: 1;
   padding: 8px;
-  border: none; /* Remove default border */
-  border-radius: 0;
-  border-bottom: 2px solid #ccc; /* Add bottom border */
+  border: none;
+  border-bottom: 2px solid #ccc;
   outline: none;
+}
+
+.search-bar input[type='text']::placeholder {
+  color: var(--gray-text-color);
 }
 
 /* ------------------------------ Main */
