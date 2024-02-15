@@ -4,12 +4,17 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
 @font-face {
   font-family: YgroSans-Book;
-  src: url('./fonts/YgroSansBeta-Book.woff') format('woff');
+  src: url('./fonts/ygroSansBeta-Book.woff') format('woff');
 }
 
 @font-face {
   font-family: YgroSans-Medium;
-  src: url('./fonts/YgroSansBeta-Medium.woff') format('woff');
+  src: url('./fonts/ygroSansBeta-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: Angelica;
+  src: url('./fonts/WhiteAngelica.woff') format('woff');
 }
 
 /* ------------------------------ Colours */
@@ -17,10 +22,10 @@
   --text-color: #202020;
   --white-text-color: #fff;
   --gray-text-color: #a5a5a5;
-  --border1-color: #f1f0f0;
-  --border2-color: #cdced4;
+  --border1-color: #dbdbdb;
+  --border2-color: #b1b1b5;
   --dark-gray-text-color: #636363;
-  --primary-color: #903d52;
+  --primary-color: #9a354e;
 }
 
 /* ------------------------------ General */

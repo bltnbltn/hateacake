@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentSlideIndex = 0;
 
   function positionSlides(index) {
-    const offset = -index * slideWidth;
+    const offset = -index * slideWidth * 1;
     carousel.style.transform = `translateX(${offset}px)`;
   }
 
@@ -81,40 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
     currentSlideIndex = index;
     updateDots(index);
   }
-
-  // 미디어 쿼리 매치 상태 확인 함수
-  function checkMediaQuery() {
-    return window.matchMedia('(max-width: 767px)').matches;
-  }
-
-  // 모바일 화면인 경우 translateX() 값을 동적으로 조정하는 함수
-  function adjustTranslateX() {
-    const slideWidth = slideGroups[0].getBoundingClientRect().width;
-    const offset = checkMediaQuery() ? slideWidth : 780; //
-    const secondSlideGroup = document.querySelector('.second-slide-group');
-    secondSlideGroup.style.transform = `translateX(${offset}px)`;
-  }
-
-  // 페이지 로드 시 초기화 함수 호출
-  window.addEventListener('load', function () {
-    adjustTranslateX();
-  });
-
-  // 윈도우 리사이즈 시 translateX() 값을 조정하는 이벤트 리스너 추가
-  window.addEventListener('resize', function () {
-    // 현재 슬라이드의 인덱스를 기억합니다.
-    const currentIndex = currentSlideIndex;
-
-    // 슬라이드의 너비를 다시 계산합니다.
-    const newSlideWidth = slideGroups[0].getBoundingClientRect().width;
-
-    // 슬라이드의 너비가 변경되었을 때만 현재 슬라이드의 위치를 조정합니다.
-    if (newSlideWidth !== slideWidth) {
-      slideWidth = newSlideWidth;
-      positionSlides(currentIndex);
-      adjustTranslateX(); // adjustTranslateX() 함수를 호출하여 두 번째 슬라이드 그룹도 조정합니다.
-    }
-  });
 
   function updateDots(index) {
     dots.forEach((dot) => dot.classList.remove('dot--active'));

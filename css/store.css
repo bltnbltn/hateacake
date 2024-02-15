@@ -1,15 +1,15 @@
 .store__description {
-  padding: 5%;
+  padding: 180px;
   color: var(--text-color);
-  text-align: center; /* 텍스트 가운데 정렬 */
+  text-align: center;
   font-family: YgroSans-Medium;
 }
 
 .store__cake-img {
   display: flex;
-  justify-content: center; /* 가로 중앙 정렬 */
-  align-items: center; /* 세로 중앙 정렬 */
-  padding: 30px;
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 30px;
 }
 
 .store__cake-img img {
@@ -24,5 +24,9 @@
 @media screen and (max-width: 767px) {
   .store__cake-img img {
     width: 150px;
+  }
+
+  .store__description {
+    padding: 30px 0px 100px 0px;
   }
 }
