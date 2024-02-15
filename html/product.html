@@ -64,6 +64,11 @@
             chewiness and smoothness. It's a sweet sensation that captures the essence of special moments in every bite.
           </p>
         </div>
+        <div class="product-detail__ingredient">
+          <p class="product-detail__ingredient-title">Ingredients</p>
+          <p class="product-detail__ingredient-list">Flour / Baking Powder / Salt / Butter / Sugar / Eggs / Buttermilk
+          </p>
+        </div>
 
         <form class="product-detail__selection">
           <div class="product-detail__select-size">
@@ -71,8 +76,8 @@
             <select class="product-detail__select-custom-icon" name="size" id="size" required>
               <option value="" disabled selected hidden>Select Size</option>
               <option value="Small">Small</option>
-              <option value="Medium">Medium</option>
-              <option value="Large">Large</option>
+              <option value="Medium">Medium + $5</option>
+              <option value="Large">Large +$10</option>
             </select>
           </div>
           <div class="product-detail__select-flavour">
@@ -84,11 +89,23 @@
             </select>
           </div>
           <div class="product-detail__select-packing">
-            <label for="packing"> Packing</label>
+            <label for="packing">Packing</label>
             <select class="product-detail__select-custom-icon" name="packing" id="packing" required>
               <option value="" disabled selected hidden>Select Packing</option>
               <option value="Gift Wrap">Gift Wrap</option>
               <option value="None">None</option>
+            </select>
+          </div>
+          <div class="product-detail__select-date">
+            <label for="packing">Arrival date</label>
+            <select class="product-detail__select-custom-icon" name="date" id="date" required>
+              <option value="" disabled selected hidden>Select Packing</option>
+              <option value="March 1">March 1</option>
+              <option value="March 2">March 2</option>
+              <option value="March 3">March 3</option>
+              <option value="March 4">March 4</option>
+              <option value="March 5">March 5</option>
+
             </select>
           </div>
           <div class="product-detail__select-quantity">
@@ -100,8 +117,8 @@
             </div>
           </div>
           <div class="product-detail__select-button">
-            <button class="product-detail__buy">Buy it Now</button>
-            <div class="product-detail__add-to-bag"><img src="../icon/bag.svg" alt=""></div>
+            <button class="product-detail__bag">Add to Cart</button>
+            <button class="product-detail__buy">Buy Now</button>
           </div>
         </form>
 
@@ -111,11 +128,6 @@
     </div>
 
     <div class="product-detail__bottom">
-      <div class="product-detail__ingredient">
-        <p class="product-detail__ingredient-title">Ingredients</p>
-        <p class="product-detail__ingredient-list">Flour / Baking Powder / Salt / Butter / Sugar / Eggs / Buttermilk</p>
-      </div>
-
       <div class="product-detail__related-product">
         <h1 class="product-detail__related-title">Related Products</h1>
         <div class="carousel-container">
@@ -148,18 +160,21 @@
     </div>
 
   </div>
-  <footer class="footer">
-    <div class="footer__social-link">
-      <a href="#"><img src="../icon/instagram.svg" alt="instagram icon"></a>
-      <a href="#"><img src="../icon/facebook.svg" alt="facebook icon"></a>
-      <a href="#"><img src="../icon/pinterest.svg" alt="pinterest icon"></a>
-    </div>
 
-    <div class="footer__copyright">
-      <p>Copyright 2022 | hateacake</p>
-      <p>All Rights Reserved.</p>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__social-link">
+        <a href="#"><img src="../icon/instagram.svg" alt="instagram icon"></a>
+        <a href="#"><img src="../icon/facebook.svg" alt="facebook icon"></a>
+        <a href="#"><img src="../icon/pinterest.svg" alt="pinterest icon"></a>
+      </div>
+      <div class="footer__copyright">
+        <p>Copyright 2022 | hateacake</p>
+        <p>All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
+
   <script src="../main.js"></script>
 </body>
 

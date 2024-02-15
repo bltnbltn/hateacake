@@ -191,4 +191,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 처음 그룹의 dot을 활성화
   updateDots(0);
+
+  // Size Price Option--------------------------------------- //
+
+  // 가격을 표시하는 요소
+  const priceElement = document.querySelector('.product-detail__price');
+
+  // 사이즈 선택 요소
+  const sizeSelect = document.getElementById('size');
+
+  // 가격 설정
+  let basePrice = 45.0;
+  let priceIncrement = 5.0; // 각 사이즈에 대한 추가 금액
+
+  // 사이즈가 변경될 때마다 호출되는 함수
+  sizeSelect.addEventListener('change', function () {
+    // 선택된 사이즈 가져오기
+    const selectedSize = sizeSelect.value;
+
+    // 사이즈에 따른 가격 설정
+    switch (selectedSize) {
+      case 'Small':
+        priceElement.textContent = '$' + basePrice.toFixed(2);
+        break;
+      case 'Medium':
+        priceElement.textContent =
+          '$' + (basePrice + priceIncrement).toFixed(2);
+        break;
+      case 'Large':
+        priceElement.textContent =
+          '$' + (basePrice + 2 * priceIncrement).toFixed(2);
+        break;
+      default:
+        priceElement.textContent = '$' + basePrice.toFixed(2);
+    }
+  });
 });

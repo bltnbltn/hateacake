@@ -232,16 +232,19 @@ ul {
 }
 
 /* ------------------------------ Footer */
-
 .footer {
+  width: 100%;
+  border-top: 1px solid var(--border1-color);
+}
+
+.footer__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 177px;
+  height: 100px;
   max-width: 1200px;
   margin: auto;
   padding: 0 16px;
-  border-top: 1px solid var(--border1-color);
 }
 
 .footer__copyright {

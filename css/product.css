@@ -13,7 +13,7 @@
 .product-detail__info {
   display: flex;
   justify-content: center;
-  padding: 70px 0px;
+  padding: 60px 0px;
 }
 
 .product-detail__img {
@@ -55,20 +55,22 @@
 }
 
 .product-detail__selection {
-  padding-top: 30px;
+  padding-top: 20px;
   font-family: Pretendard Variable;
   font-weight: 400;
 }
 
 .product-detail__select-size,
 .product-detail__select-flavour,
-.product-detail__select-packing {
+.product-detail__select-packing,
+.product-detail__select-date {
   padding-bottom: 14px;
 }
 
 .product-detail__select-size label,
 .product-detail__select-flavour label,
-.product-detail__select-packing label {
+.product-detail__select-packing label,
+.product-detail__select-date label {
   display: flex;
   font-size: 16px;
   padding-bottom: 8px;
@@ -114,6 +116,17 @@ option[value=''][disabled] {
   display: none;
 }
 
+.product-detail__bag {
+  font-size: 16px;
+  color: var(--primary-color);
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
 .product-detail__buy {
   font-size: 16px;
   color: var(--white-text-color);
@@ -122,28 +135,12 @@ option[value=''][disabled] {
   height: 50px;
   border: 1px solid var(--primary-color);
   border-radius: 4px;
-  cursor: pointer;
 }
 
-.product-detail__add-to-bag {
-  width: 64px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--border2-color);
-  border-radius: 4px;
-  margin-left: 16px;
-}
-
-.product-detail__add-to-bag img {
-  width: 24px;
-  height: 24px;
-}
-
-.product-detail__select-button {
-  display: flex;
-  align-items: center;
+.product-detail__bottom {
+  border-top: 1px solid var(--border2-color);
+  color: var(--text-color);
+  padding: 20px 0px;
 }
 
 .product-detail__select-quantity {
@@ -178,25 +175,22 @@ option[value=''][disabled] {
 }
 
 .product-detail__ingredient {
-  display: flex;
-  justify-content: start;
   border-bottom: 1px solid var(--border2-color);
-  padding-bottom: 40px;
+  color: var(--dark-gray-text-color);
+  padding: 20px 0px;
 }
 
 .product-detail__ingredient-title {
   font-family: Pretendard Variable;
   font-weight: 600;
   font-size: 14px;
-  color: var(--primary-color);
-  padding-right: 52px;
+  margin-bottom: 8px;
 }
 
 .product-detail__ingredient-list {
   font-family: Pretendard Variable;
   font-weight: 400;
   font-size: 14px;
-  color: var(--gray-text-color);
 }
 
 .product-detail__related-title {
@@ -287,6 +281,10 @@ option[value=''][disabled] {
 
 @media screen and (max-width: 767px) {
   /* ------------------------------ Product-detail */
+  .product-detail {
+    padding: 0;
+  }
+
   .product-detail__info {
     display: block;
     padding: 0px 0px;
