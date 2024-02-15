@@ -35,7 +35,7 @@
   max-width: 1200px;
   color: var(--text-color);
   margin: auto;
-  padding: 60px 0px 120px 0px;
+  padding: 60px 30px 120px 30px;
 }
 
 .about__img {
@@ -86,12 +86,13 @@
   }
 
   .about__container {
+    width: 90%;
     display: block;
-    padding: 20px;
+    padding: 0;
+    margin-top: 20px;
   }
 
   .about {
-    width: 90%;
     display: block;
     margin: auto;
     padding: 0;

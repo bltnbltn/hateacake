@@ -13,7 +13,7 @@
 .product-detail__info {
   display: flex;
   justify-content: center;
-  padding: 100px 0px;
+  padding: 100px 30px;
 }
 
 .product-detail__img {
