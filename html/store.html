@@ -23,7 +23,7 @@
 
     <ul class="navbar__menu">
 
-      <li class="menu-btn"><a onclick="clickSingleA(this)" class="single" href="./cakes.html">Cakes</a></li>
+      <li class="menu-btn"><a onclick="clickSingleA(this)" class="single" href="./cakes.html">Shop</a></li>
       <li class="menu-btn"><a onclick="clickSingleA(this)" class="single" href="./about.html">About</a></li>
       <li class="menu-btn"><a onclick="clickSingleA(this)" class="single" href="./store.html">Store</a></li>
 
@@ -37,12 +37,12 @@
 
     <ul class="navbar__icons">
       <div class="search-bar">
-        <input type="text" placeholder="Search for cake">
-        <button class="search-icon--mobile" alt=""></button>
+        <input type="text" id="search-input" placeholder="Search for cake">
+        <span class="clear-icon" id="clear-icon">&times;</span>
       </div>
       <li class="search-icon"><a href="#"><img src="../icon/search.svg" alt="Search icon"></a></li>
       <li class="account-icon"><a href="#"><img src="../icon/account.svg" alt="Account icon"></a></li>
-      <li class="bag-icon"><a href="#"><img src="../icon/bag.svg" alt="bag icon"></a></li>
+      <li class="bag-icon"><a href="#"><img src="../icon/bag.svg" alt="Bag icon"></a></li>
       <a href="#" class="navbar__toggleBtn"><img src="../icon/hamburger.svg" alt="Humburger menu icon"></a>
     </ul>
 
@@ -56,17 +56,22 @@
       <h1>Offline Store opening soon</h1>
     </div>
   </div>
-
+  
   <footer class="footer">
     <div class="footer__container">
+      <div class="footer__copyright">
+        <p>Copyright 2022 hateacake</p>
+        <p>All Rights Reserved.</p>
+      </div>
+      <div class="footer__address">
+        <p><span>Address</span>Maple Street,Toronto, ON M1A 2B3, Canada</p>
+        <p><span>Contact</span>+1 (416) 555-1234</p>
+        <p><span>Hours</span>Mon - Sat: 8am - 7pmㅤ|ㅤSun: 10am - 5pm</p>
+      </div>
       <div class="footer__social-link">
         <a href="#"><img src="../icon/instagram.svg" alt="instagram icon"></a>
         <a href="#"><img src="../icon/facebook.svg" alt="facebook icon"></a>
         <a href="#"><img src="../icon/pinterest.svg" alt="pinterest icon"></a>
-      </div>
-      <div class="footer__copyright">
-        <p>Copyright 2022 | hateacake</p>
-        <p>All Rights Reserved.</p>
       </div>
     </div>
   </footer>

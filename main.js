@@ -1,12 +1,49 @@
 // Search Bar--------------------------------------- //
 
 // 검색 아이콘을 클릭했을 때 활성화/비활성화 상태를 토글하는 함수
+let searchBarVisible = false;
+
+function toggleLogoVisibility() {
+  if (window.innerWidth <= 767 && searchBarVisible) {
+    document.querySelector('.navbar__logo').style.visibility = 'hidden';
+  } else {
+    document.querySelector('.navbar__logo').style.visibility = 'visible';
+  }
+}
+
 document
   .querySelector('.search-icon')
   .addEventListener('click', function (event) {
     event.preventDefault();
-    document.querySelector('.search-bar').classList.toggle('active');
+    const searchBar = document.querySelector('.search-bar');
+    searchBar.classList.toggle('active');
+    searchBarVisible = !searchBarVisible;
+    toggleLogoVisibility(); // 아이콘 클릭시 로고 가시성 변경
   });
+
+window.addEventListener('resize', function () {
+  toggleLogoVisibility(); // 창 크기 변경시 로고 가시성 변경
+});
+
+// 검색 clear 기능
+document.getElementById('clear-icon').addEventListener('click', function () {
+  document.getElementById('search-input').value = ''; // 검색 입력 필드 내용 지우기
+});
+const searchInput = document.getElementById('search-input');
+const clearIcon = document.getElementById('clear-icon');
+
+searchInput.addEventListener('input', function () {
+  if (this.value.length > 0) {
+    clearIcon.style.display = 'block'; // 입력 내용이 있는 경우 아이콘을 보이도록 설정
+  } else {
+    clearIcon.style.display = 'none'; // 입력 내용이 없는 경우 아이콘을 숨김
+  }
+});
+
+clearIcon.addEventListener('click', function () {
+  searchInput.value = ''; // 검색 입력 필드 내용 지우기
+  clearIcon.style.display = 'none'; // 아이콘 숨기기
+});
 
 // Hamburger Menu--------------------------------------- //
 
