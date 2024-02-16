@@ -4,12 +4,12 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
 @font-face {
   font-family: 'YgroSans-Book';
-  src: url('./fonts/ygroSansBeta-Book.woff') format('woff');
+  src: url('./fonts/YgroSansBeta-Book.woff') format('woff');
 }
 
 @font-face {
   font-family: 'YgroSans-Medium';
-  src: url('./fonts/ygroSansBeta-Medium.woff') format('woff');
+  src: url('./fonts/YgroSansBeta-Medium.woff') format('woff');
 }
 
 @font-face {
@@ -183,16 +183,16 @@ ul {
   color: var(--text-color);
   font-size: 16px;
   flex: 1;
-  padding: 8px;
   border: none;
   border-radius: 30px;
   border: 1px solid var(--border2-color);
   outline: none;
-  padding: 14px;
+  padding: 10px 8px;
 }
 
 .search-bar input[type='text']::placeholder {
   color: var(--gray-text-color);
+  padding-left: 8px;
 }
 
 /* ------------------------------ Main */
