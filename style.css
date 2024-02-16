@@ -297,12 +297,17 @@ ul {
   line-height: 150%;
 }
 
-.footer__address span {
+.footer__address span:first-child {
   font-weight: 600;
   margin-right: 10px;
 }
+
 .footer__address p {
   margin: 16px 0px;
+}
+
+.hr {
+  padding: 10px;
 }
 
 .footer__social-link {
@@ -430,6 +435,7 @@ ul {
     flex-direction: column-reverse;
     text-align: center;
     padding: 30px;
+    min-width: 400px;
   }
 
   .footer__social-link,
