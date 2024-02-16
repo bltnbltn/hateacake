@@ -57,6 +57,105 @@ toggleBtn.addEventListener('click', function (e) {
   e.preventDefault();
   menu.classList.toggle('active');
 });
+// Tab Bar--------------------------------------------- //
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+
+  // 탭 내용을 모두 숨김
+  tabcontent = document.getElementsByClassName('tabcontent');
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = 'none';
+  }
+
+  // 탭 버튼을 모두 초기화
+  tablinks = document.getElementsByClassName('tablinks');
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove('active');
+  }
+
+  // 클릭된 탭에 해당하는 내용을 표시
+  document.getElementById(tabName).style.display = 'block';
+  evt.currentTarget.classList.add('active');
+
+  // 해당 카테고리에 속하는 제품들만 표시
+  filterProductByCategory(tabName.toLowerCase()); // 카테고리를 소문자로 변환하여 전달
+}
+
+function filterProductByCategory(category) {
+  var items = document.getElementsByClassName('product-item__item');
+
+  // 모든 제품을 숨김
+  for (var i = 0; i < items.length; i++) {
+    items[i].style.display = 'none';
+  }
+
+  // 해당 카테고리에 속하는 제품만 표시
+  if (category === 'all') {
+    // 모든 제품을 표시
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.display = 'block';
+    }
+  } else {
+    // 해당 카테고리에 속하는 제품만 표시
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].getAttribute('data-category') === category) {
+        items[i].style.display = 'block';
+      }
+    }
+  }
+}
+window.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('all-tab').click(); // "All" 탭 클릭 이벤트 발생
+});
+// Add to Cart----------------------------------------- //
+// Add to Cart 버튼 요소를 가져옵니다.
+const addToCartButton = document.querySelector('.product-detail__bag');
+
+// 장바구니 아이콘 요소를 가져옵니다.
+const cartIcon = document.querySelector('.bag-icon');
+
+// 장바구니 아이템 수를 저장할 변수를 초기화합니다.
+let cartItemCount = 0;
+
+// Add to Cart 버튼에 클릭 이벤트 리스너를 추가합니다.
+addToCartButton.addEventListener('click', function (event) {
+  event.preventDefault(); // 기본 동작을 막습니다. (페이지 이동 등)
+
+  // 모든 옵션을 선택했는지 확인합니다.
+  const selectedSize = document.getElementById('size').value;
+  const selectedFlavour = document.getElementById('flavour').value;
+  const selectedPacking = document.getElementById('packing').value;
+  const selectedDate = document.getElementById('date').value;
+
+  if (!selectedSize || !selectedFlavour || !selectedPacking || !selectedDate) {
+    alert('Please select all options.');
+    return; // 함수를 종료합니다.
+  }
+
+  // 선택된 수량을 가져옵니다.
+  const selectedQuantity = parseInt(
+    document.querySelector('.product-detail__quantity').textContent
+  );
+
+  // 장바구니 아이콘에 숫자 뱃지를 표시합니다.
+  cartItemCount += selectedQuantity;
+  cartIcon.innerHTML = `<a href="#"><img src="../icon/bag.svg" alt="Bag icon"></a><span class="cart-badge">${cartItemCount}</span>`;
+
+  // 장바구니에 추가하는 로직을 구현합니다.
+  // 이 부분은 실제로 장바구니에 추가하는 로직으로 변경해야 합니다.
+  // 예를 들어, localStorage에 추가하는 등의 방식으로 구현할 수 있습니다.
+
+  // 장바구니에 상품을 추가한 후, 사용자에게 성공적으로 추가되었음을 알리는 등의 메시지를 보여줄 수 있습니다.
+  alert(`${selectedQuantity} item has been added to the cart`);
+});
+
+// // 장바구니 아이콘 클릭 시 장바구니에 담은 아이템을 보여주는 로직을 구현합니다.
+// cartIcon.addEventListener('click', function () {
+//   // 장바구니에 담은 아이템을 보여주는 로직을 구현합니다.
+//   // 이 부분은 실제로 장바구니 아이템을 보여주는 UI를 구현해야 합니다.
+//   // 예를 들어, 모달 창이나 새로운 페이지에 장바구니 아이템을 나타내는 내용을 표시할 수 있습니다.
+//   alert('장바구니 아이템을 보여줍니다.');
+// });
 
 // Input Stepper--------------------------------------- //
 

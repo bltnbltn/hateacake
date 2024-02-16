@@ -6,6 +6,41 @@
   color: var(--text-color);
 }
 
+.tab {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.tab button {
+  font-size: 20px;
+  background-color: #ffffff;
+  border: 0;
+  color: var(--border2-color);
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 1px solid transparent;
+  margin-top: 30px;
+}
+
+.tab button:hover {
+  border-bottom: 1px solid #cccccc;
+}
+
+.tab button.active {
+  border-bottom: 1px solid #cccccc;
+  color: var(--text-color);
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
 .product-item__grid {
   max-width: 1200px;
   display: grid;

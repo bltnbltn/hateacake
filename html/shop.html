@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../css/cakes.css">
+  <link rel="stylesheet" href="../css/shop.css">
 
   <title>HATE A CAKE</title>
   <link rel="icon" href="./img/favicon.jpg" type="image/x-icon">
@@ -24,14 +24,14 @@
 
     <ul class="navbar__menu">
 
-      <li class="menu-btn"><a onclick="clickSingleA(this)" class="single" href="./cakes.html">Shop</a></li>
+      <li class="menu-btn"><a onclick="clickSingleA(this)" class="single" href="./shop.html">Shop</a></li>
       <li class="menu-btn"><a onclick="clickSingleA(this)" class="single" href="./about.html">About</a></li>
       <li class="menu-btn"><a onclick="clickSingleA(this)" class="single" href="./store.html">Store</a></li>
 
       <!-- 추가적인 메뉴 -->
       <li class="additional-menu menu-divider"></li>
       <li class="additional-menu menu-btn">
-        <a onclick="clickSingleA(this)" class="single" href="#">My Order</a>
+        <a onclick="clickSingleA(this)" class="single" href="../html/login.html">My Order</a>
       </li>
 
     </ul>
@@ -53,74 +53,95 @@
       <h1>Shop</h1>
     </div>
 
+
+    <!-- Tab 버튼 -->
+    <div class="tab">
+      <button id="all-tab" class="tablinks" onclick="openTab(event, 'all')">All</button>
+      <button class="tablinks" onclick="openTab(event, 'custom')">Custom</button>
+      <button class="tablinks" onclick="openTab(event, 'wedding')">Wedding</button>
+    </div>
+
+    <!-- 각 탭에 대한 내용 -->
+    <div id="all" class="tabcontent">
+      <!-- All 탭 내용 -->
+    </div>
+
+    <div id="custom" class="tabcontent">
+      <!-- Custom 탭 내용 -->
+    </div>
+
+    <div id="wedding" class="tabcontent">
+      <!-- Wedding 탭 내용 -->
+    </div>
+
     <div class="product-item__grid">
-      <div class="product-item__item">
+      <div class="product-item__item" data-category="custom">
         <a href="product.html"><img src="../img/cake01.jpg" alt=""></a>
         <h2 class="product-item__name">Rainbow cake</h2>
         <h3 class="product-item__price">$45.00</h3>
       </div>
 
-      <div class="product-item__item">
+      <div class="product-item__item" data-category="custom">
         <a href=""><img src="../img/cake02.jpg" alt=""></a>
-        <h2 class="product-item__name">Fig cake</h2>
+        <h2 class="product-item__name">Chocolate cake</h2>
         <h3 class="product-item__price">$35.00</h3>
       </div>
 
-      <div class="product-item__item">
+      <div class="product-item__item" data-category="wedding">
         <a href=""><img src="../img/cake03.jpg" alt=""></a>
         <h2 class="product-item__name">Adorable cake</h2>
         <h3 class="product-item__price">$35.00</h3>
       </div>
 
-      <div class="product-item__item">
+      <div class="product-item__item" data-category="custom">
         <a href=""><img src="../img/cake04.jpg" alt=""></a>
         <h2 class="product-item__name">Macaroon cake</h2>
         <h3 class="product-item__price">$35.00</h3>
       </div>
 
-      <div class="product-item__item ">
+      <div class="product-item__item " data-category="custom">
         <a href="product.html"><img src="../img/cake05.jpg" alt=""></a>
         <h2 class="product-item__name">Oreo cake</h2>
         <h3 class="product-item__price">$45.00</h3>
       </div>
 
-      <div class="product-item__item">
+      <div class="product-item__item" data-category="custom">
         <a href=""><img src="../img/cake06.jpg" alt=""></a>
         <h2 class="product-item__name">Cherry cake</h2>
         <h3 class="product-item__price">$35.00</h3>
       </div>
 
-      <div class="product-item__item">
+      <div class="product-item__item" data-category="custom">
         <a href=""><img src="../img/cake07.jpg" alt=""></a>
-        <h2 class="product-item__name">Tart Cherry</h2>
+        <h2 class="product-item__name">Tart Cherry cake</h2>
         <h3 class="product-item__price">$45.00</h3>
       </div>
 
-      <div class="product-item__item">
+      <div class="product-item__item" data-category="wedding">
         <a href=""><img src="../img/cake08.jpg" alt=""></a>
         <h2 class="product-item__name">Unicorn cake</h2>
         <h3 class="product-item__price">$35.00</h3>
       </div>
 
-      <div class="product-item__item">
+      <div class="product-item__item" data-category="wedding">
         <a href="product.html"><img src="../img/cake09.jpg" alt=""></a>
         <h2 class="product-item__name">Fig cake</h2>
         <h3 class="product-item__price">$40.00</h3>
       </div>
 
-      <div class="product-item__item">
+      <div class="product-item__item" data-category="custom">
         <a href=""><img src="../img/cake10.jpg" alt=""></a>
         <h2 class="product-item__name">Rabbit cake</h2>
         <h3 class="product-item__price">$40.00</h3>
       </div>
 
-      <div class="product-item__item">
+      <div class="product-item__item" data-category="custom">
         <a href=""><img src="../img/cake11.jpg" alt=""></a>
         <h2 class="product-item__name">Floral cake</h2>
         <h3 class="product-item__price">$50.00</h3>
       </div>
 
-      <div class="product-item__item">
+      <div class="product-item__item" data-category="wedding">
         <a href=""><img src="../img/cake12.jpg" alt=""></a>
         <h2 class="product-item__name">Heart cake</h2>
         <h3 class="product-item__price">$30.00</h3>

@@ -1,0 +1,78 @@
+.login__container {
+  max-width: 440px;
+  height: 440px;
+  background: #f9f9f9;
+  margin: 120px auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; /* 자식 요소들을 세로로 배치합니다. */
+  justify-content: center; /* 세로 방향 가운데 정렬 */
+  align-items: center; /* 가로 방향 가운데 정렬 */
+  color: var(--text-color);
+}
+
+.login__heading {
+  color: var(--text-color);
+  font-family: YgroSans-Medium;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.login__form p {
+  color: var(--text-color);
+  font-family: 'Pretendard Variable';
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.login__form input {
+  display: flex;
+  width: 350px;
+  height: 50px;
+  padding-left: 10px;
+  border: 1px solid var(--border2-color);
+  background: #fff;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.login__form input::placeholder {
+  color: var(--gray-text-color);
+}
+
+.email,
+.password {
+  gap: 4px;
+}
+
+.login__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  padding: 15px 0px 16px 0px;
+  border-radius: 4px;
+  background: var(--primary-color);
+  border: 0;
+  color: var(--white-text-color);
+  margin-bottom: 34px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.login___auth {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* MOBILE, ~ 767 */
+@media screen and (max-width: 767px) {
+  .login__container {
+    margin: 0 auto;
+  }
+}

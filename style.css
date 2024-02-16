@@ -21,9 +21,9 @@
 :root {
   --text-color: #202020;
   --white-text-color: #fff;
-  --gray-text-color: #a5a5a5;
+  --gray-text-color: #aaaaaa;
   --border1-color: #f1f1f5;
-  --border2-color: #b1b1b5;
+  --border2-color: #cdced4;
   --dark-gray-text-color: #636363;
   --primary-color: #9a354e;
 }
@@ -67,6 +67,24 @@ ul {
   max-width: 1200px;
   background-color: #fff;
   padding: 0 16px;
+}
+
+/* 장바구니 뱃지 스타일 */
+.cart-badge {
+  width: 24px;
+  height: 24px;
+  font-family: Pretendard variable;
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  top: 0px; /* 아이콘 위로 이동 */
+  right: 3px; /* 우측 정렬 */
+  background-color: var(--primary-color);
+  color: var(--white-text-color);
+  border-radius: 50%; /* 원형으로 스타일링 */
+  padding: 5px 8px; /* 원의 크기를 조정합니다. */
+  line-height: 1; /* 텍스트의 수직 정렬을 위해 */
+  z-index: 2; /* 다른 요소 위에 표시되도록 설정 */
 }
 
 /* Hamburger Menu */
@@ -124,6 +142,7 @@ ul {
   list-style: none;
   display: flex;
   align-items: center;
+  position: relative; /* 부모 요소를 상대 위치로 설정 */
 }
 
 .navbar__icons img {
@@ -141,13 +160,17 @@ ul {
 }
 
 .clear-icon {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: var(--border1-color);
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   display: none;
-  padding: 10px;
   color: var(--gray-text-color);
   font-size: 20px;
 }
@@ -256,7 +279,7 @@ ul {
   width: 100%;
   border-top: 1px solid var(--border1-color);
   font-family: Pretendard Variable;
-  color: var(--border2-color);
+  color: var(--gray-text-color);
   font-weight: 400;
   font-size: 14px;
 }
@@ -358,6 +381,9 @@ ul {
     display: none; /* 모바일에서는 숨김 */
   }
 
+  .cart-badge {
+    right: 50px;
+  }
   /* ------------------------------ Main */
   .main__hero-img {
     display: flex;
