@@ -1,7 +1,7 @@
 /* ----------------------------------ABOUT PAGE----------------------------------  */
 .about__heading {
   color: var(--text-color);
-  font-family: YgroSans-Medium;
+  font-family: 'YgroSans-Medium';
   font-weight: 600;
   font-size: 30px;
   line-height: 36px;
@@ -52,7 +52,7 @@
 }
 
 .about__title {
-  font-family: YgroSans-Medium;
+  font-family: 'YgroSans-Medium';
   font-size: 18px;
   line-height: 20px;
   margin-bottom: 10px;

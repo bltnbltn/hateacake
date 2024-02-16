@@ -3,17 +3,17 @@
 /* ------------------------------ Font face */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
 @font-face {
-  font-family: YgroSans-Book;
+  font-family: 'YgroSans-Book';
   src: url('./fonts/ygroSansBeta-Book.woff') format('woff');
 }
 
 @font-face {
-  font-family: YgroSans-Medium;
+  font-family: 'YgroSans-Medium';
   src: url('./fonts/ygroSansBeta-Medium.woff') format('woff');
 }
 
 @font-face {
-  font-family: Angelica;
+  font-family: 'Angelica';
   src: url('./fonts/WhiteAngelica.woff') format('woff');
 }
 
@@ -219,7 +219,7 @@ ul {
 }
 
 .main__title {
-  font-family: YgroSans-Book;
+  font-family: 'YgroSans-Book';
   font-size: 50px;
 }
 
@@ -253,7 +253,7 @@ ul {
 }
 
 .best-product__heading h1 {
-  font-family: YgroSans-Medium;
+  font-family: 'YgroSans-Medium';
   font-weight: 600;
   font-size: 34px;
   text-align: center;
