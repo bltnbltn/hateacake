@@ -18,7 +18,7 @@
 }
 
 .store__heading h1 {
-  font-size: 30px;
+  font-size: 32px;
 }
 
 @media screen and (max-width: 767px) {
@@ -27,7 +27,7 @@
   }
 
   .store__heading h1 {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .store__description {

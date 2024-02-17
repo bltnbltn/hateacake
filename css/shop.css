@@ -2,34 +2,41 @@
 
 /* -----------------------Product-item */
 .product {
-  padding: 0 30px;
+  padding: 120px 30px;
   color: var(--text-color);
+}
+
+.product__heading h1 {
+  font-family: 'YgroSans-Medium';
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .tab {
   display: flex;
   justify-content: center;
-  gap: 14px;
 }
 
 .tab button {
-  font-size: 20px;
+  font-size: 18px;
   background-color: #ffffff;
   border: 0;
-  color: var(--border2-color);
-  padding: 10px;
+  color: var(--gray-text-color);
+  padding: 8px 0px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-bottom: 1px solid transparent;
-  margin-top: 30px;
+  margin: 0px 16px;
 }
 
 .tab button:hover {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid var(--text-color);
 }
 
 .tab button.active {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid var(--text-color);
   color: var(--text-color);
 }
 
@@ -53,15 +60,7 @@
 .product-item__item img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-}
-
-.product__heading h1 {
-  font-family: 'YgroSans-Medium';
-  font-size: 30px;
-  line-height: 36px;
-  margin-top: 120px;
-  text-align: center;
+  border-radius: 4px;
 }
 
 .product-item__name {
@@ -75,7 +74,7 @@
   font-weight: 300;
   font-size: 16px;
   letter-spacing: 0.5px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 /* -----------------------Pagination*/
@@ -86,16 +85,24 @@
   align-items: center;
   font-family: Pretendard Variable;
   font-weight: 400;
-  margin: 80px 0px 120px 0px;
+  margin: 0;
 }
 
 .pagination__item {
-  margin: 14px;
+  margin: 8px;
 }
 
 .pagination__item img {
   display: block;
   margin: 0 auto;
+}
+
+.pagination__link {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
 }
 
 .pagination__link--01 {
@@ -113,25 +120,30 @@
 
 @media screen and (max-width: 767px) {
   .product {
-    padding: 0;
+    padding: 40px 0px;
+  }
+
+  .product__heading h1 {
+    margin-bottom: 30px;
   }
 
   .product-item__grid {
     grid-template-columns: repeat(2, 1fr); /* 2개의 열 */
-    gap: 16px;
+    gap: 10px;
+    margin: 30px 0px;
   }
 
-  .product__heading h1 {
-    margin-top: 30px;
+  .product-item__name {
+    margin: 4px 0px;
   }
 
   /* 1행 좌측에만 패딩 주기 */
   .product-item__item:nth-child(odd) {
-    margin-left: 16px;
+    padding-left: 16px;
   }
 
   /* 2행 우측에만 패딩 주기 */
   .product-item__item:nth-child(even) {
-    margin-right: 16px;
+    padding-right: 16px;
   }
 }

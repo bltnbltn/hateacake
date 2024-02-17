@@ -4,7 +4,7 @@
   background: #f9f9f9;
   border: 1px solid var(--border1-color);
   margin: 120px auto;
-  border-radius: 10px;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,38 +15,37 @@
 .login__heading {
   color: var(--text-color);
   font-family: 'YgroSans-Medium';
-  font-size: 30px;
+  font-size: 32px;
   text-align: center;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
-.login__form p {
-  color: var(--text-color);
-  font-family: 'Pretendard Variable';
-  font-size: 14px;
+.login__form {
+  font-family: Pretendard Variable;
   font-weight: 400;
-  margin-bottom: 6px;
 }
 
 .login__form input {
   display: flex;
   width: 350px;
   height: 50px;
-  padding-left: 10px;
+  padding-left: 12px;
   border: 1px solid var(--border2-color);
   background: #fff;
   border-radius: 4px;
-  margin-bottom: 14px;
   font-size: 14px;
+}
+
+.email {
+  margin-bottom: 8px;
+}
+
+.password {
+  margin-bottom: 12px;
 }
 
 .login__form input::placeholder {
   color: var(--gray-text-color);
-}
-
-.email,
-.password {
-  gap: 4px;
 }
 
 .login__button {
@@ -54,21 +53,26 @@
   justify-content: center;
   align-items: center;
   width: 350px;
-  padding: 15px 0px 16px 0px;
+  height: 50px;
   border-radius: 4px;
   background: var(--primary-color);
   border: 0;
   color: var(--white-text-color);
-  margin-bottom: 34px;
+  margin-bottom: 30px;
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
 }
 
-.login___auth {
+.login__auth {
   display: flex;
-  gap: 24px;
   justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.login__auth a {
+  color: var(--dark-gray-text-color);
 }
 
 /* MOBILE, ~ 767 */
