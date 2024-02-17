@@ -3,19 +3,9 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;filter:url(#Adobe_OpacityMaskFilter);}
-	
-		.st1{mask:url(#path-1-inside-1_259_4598_00000151514307402936072600000013939279670060684978_);fill:none;stroke:#202020;stroke-width:4;stroke-linejoin:round;}
-	.st2{fill:none;stroke:#202020;stroke-width:2;}
+	.st0{fill:none;stroke:#202020;stroke-width:2;stroke-linecap:round;}
+	.st1{fill:none;stroke:#202020;stroke-width:2.1306;stroke-linejoin:round;}
 </style>
-<defs>
-	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="1" y="0" width="22" height="24">
-		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-	</filter>
-</defs>
-<mask maskUnits="userSpaceOnUse" x="1" y="0" width="22" height="24" id="path-1-inside-1_259_4598_00000151514307402936072600000013939279670060684978_">
-	<path class="st0" d="M4,2h16c0.55,0,1,0.45,1,1v18c0,0.55-0.45,1-1,1H4c-0.55,0-1-0.45-1-1V3C3,2.45,3.45,2,4,2z"/>
-</mask>
-<path class="st1" d="M4,2h16c0.55,0,1,0.45,1,1v18c0,0.55-0.45,1-1,1H4c-0.55,0-1-0.45-1-1V3C3,2.45,3.45,2,4,2z"/>
-<path class="st2" d="M8,6v2c0,2.21,1.79,4,4,4l0,0c2.21,0,4-1.79,4-4V6"/>
+<path class="st0" d="M8,6v2c0,2.2,1.8,4,4,4l0,0c2.2,0,4-1.8,4-4V6"/>
+<path class="st1" d="M20,22H4c-0.6,0-1-0.4-1-1V3c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1v18C21,21.6,20.6,22,20,22z"/>
 </svg>

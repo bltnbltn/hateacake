@@ -1,7 +1,6 @@
 .login__container {
-  max-width: 440px;
-  height: 440px;
-  background: #f9f9f9;
+  max-width: 500px;
+  height: 500px;
   border: 1px solid var(--border1-color);
   margin: 120px auto;
   border-radius: 4px;
@@ -10,6 +9,7 @@
   justify-content: center;
   align-items: center;
   color: var(--text-color);
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
 }
 
 .login__heading {
@@ -34,6 +34,8 @@
   background: #fff;
   border-radius: 4px;
   font-size: 14px;
+  font-family: Pretendard Variable;
+  font-weight: 400;
 }
 
 .email {
@@ -58,7 +60,31 @@
   background: var(--primary-color);
   border: 0;
   color: var(--white-text-color);
-  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signup a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.forgot-password a {
+  color: var(--dark-gray-text-color);
+}
+
+.signup__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 50px;
+  border-radius: 4px;
+  background: #e27f8f;
+  margin: 16px auto;
+  border: 0;
+  color: var(--white-text-color);
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
@@ -69,19 +95,13 @@
   justify-content: center;
   align-items: center;
   font-size: 14px;
-}
-
-.login__auth a {
-  color: var(--dark-gray-text-color);
+  margin: 16px 0px;
 }
 
 /* MOBILE, ~ 767 */
 @media screen and (max-width: 767px) {
   .login__container {
     margin: 0 auto;
-  }
-
-  .login__container {
-    border: none;
+    box-shadow: none;
   }
 }

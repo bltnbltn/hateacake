@@ -72,19 +72,21 @@ ul {
 
 /* 장바구니 뱃지 스타일 */
 .cart-badge {
-  width: 24px;
-  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
   font-family: Pretendard variable;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   position: absolute;
-  top: 0px;
-  right: 3px;
-  background-color: var(--primary-color);
+  top: 1px;
+  right: 1px;
+  background-color: rgb(246, 105, 107);
   color: var(--white-text-color);
   border-radius: 50%;
   padding: 5px 8px;
-  line-height: 1;
   z-index: 2;
 }
 
@@ -305,7 +307,7 @@ ul {
 
 .hr {
   padding: 8px;
-  font-weight: 100;
+  color: var(--border2-color);
 }
 
 .footer__social-link {
@@ -387,6 +389,7 @@ ul {
   .cart-badge {
     right: 50px;
   }
+
   /* ------------------------------ Main */
   .main__hero-img {
     display: flex;

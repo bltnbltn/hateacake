@@ -1,4 +1,4 @@
-/* ----------------------------------CAKES PAGE----------------------------------  */
+/* ----------------------------------SHOP PAGE----------------------------------  */
 
 /* -----------------------Product-item */
 .product {
@@ -8,6 +8,7 @@
 
 .product__heading h1 {
   font-family: 'YgroSans-Book';
+  font-weight: 100;
   font-size: 32px;
   text-align: center;
   margin-bottom: 60px;

@@ -7,5 +7,5 @@
 	.st1{fill:none;stroke:#202020;stroke-width:2;stroke-linecap:round;}
 </style>
 <circle class="st0" cx="9.5" cy="9.5" r="5.5"/>
-<path class="st1" d="M15.5,15.5L20,20"/>
+<path class="st1" d="M16,16l4,4"/>
 </svg>
