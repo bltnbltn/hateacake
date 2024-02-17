@@ -51,7 +51,7 @@
 
 .product-detail__body {
   color: var(--dark-gray-text-color);
-  line-height: 150%;
+  line-height: 160%;
 }
 
 .product-detail__ingredient {
@@ -328,7 +328,7 @@ option[value=''][disabled] {
 
   .product-detail__bottom {
     margin: auto;
-    padding: 30px 0px;
+    padding: 60px 0px;
   }
 
   .slide {
