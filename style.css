@@ -165,7 +165,7 @@ ul {
 .clear-icon {
   font-size: 18px;
   text-align: center;
-  position: relative;
+  position: absolute;
   top: 6px;
   right: 16px;
   cursor: pointer;
