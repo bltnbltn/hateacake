@@ -57,6 +57,45 @@ toggleBtn.addEventListener('click', function (e) {
   e.preventDefault();
   menu.classList.toggle('active');
 });
+
+// Hero Carousel--------------------------------------------- //
+
+document.addEventListener('DOMContentLoaded', function () {
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.auto-slide');
+  const totalSlides = slides.length;
+  const sliderBar = document.querySelector('.slider-bar');
+
+  function showSlide(index) {
+    if (index < 0) {
+      index = totalSlides - 1;
+    } else if (index >= totalSlides) {
+      index = 0;
+    }
+
+    const offset = -index * 100;
+    document.querySelector(
+      '.auto-slider-container'
+    ).style.transform = `translateX(${offset}%)`;
+    currentIndex = index;
+    updateSliderBar();
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  // 3초마다 다음 슬라이드 보여주기
+  setInterval(nextSlide, 3000);
+
+  // 슬라이드 막대 업데이트
+  function updateSliderBar() {
+    const percent =
+      ((currentIndex + 1) / totalSlides) * 100 * (3 / totalSlides); // 모바일 사이즈에서는 3분의 1 비율로 조정
+    sliderBar.style.width = `${percent}%`;
+  }
+});
+
 // Tab Bar--------------------------------------------- //
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;

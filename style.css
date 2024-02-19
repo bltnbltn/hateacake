@@ -194,26 +194,48 @@ ul {
 }
 
 /* ------------------------------ Main */
-.main__hero-img {
-  display: flex;
-  background: url('img/hero.jpg') no-repeat center / cover;
-  padding: 120px;
-}
 
 .main__header-box {
-  position: relative;
-  width: 772px;
+  position: absolute;
+  min-width: 330px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto; /* 너비를 자동으로 설정하여 유동적으로 크기 조정 */
+  max-width: 90%; /* 부모 요소에 대해 최대 너비 설정 */
   height: auto;
-  margin: auto;
-  transition: 0.6s all ease-in-out;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px); /* Safari 브라우저를 위한 접두사 추가 */
-  display: block;
-  padding: 80px;
+  -webkit-backdrop-filter: blur(6px);
+  padding: 4%;
   text-align: center;
   color: var(--text-color);
   border-radius: 20px;
+}
+
+.auto-slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.auto-slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.auto-slide {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  min-height: 500px;
+  max-height: 600px;
+}
+
+.auto-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .main__title {
@@ -227,6 +249,29 @@ ul {
   font-size: 18px;
   line-height: 28px;
   padding-top: 16px;
+}
+
+/* 슬라이드 막대 스타일링 */
+.slider-bar-container {
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -50%); /* 정중앙으로 이동 */
+  width: 330px;
+  height: 2px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* 흰색 배경에 40%의 투명도 적용 */
+}
+
+.slider-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+  transition: width 0.5s ease;
 }
 
 /* ------------------------------ Best Item */
@@ -391,14 +436,21 @@ ul {
   }
 
   /* ------------------------------ Main */
-  .main__hero-img {
-    display: flex;
-    background: url('img/mobile_home_cake.jpg') no-repeat center / cover;
-    padding: 60px 24px 180px 24px;
+  .slide-image-1 {
+    content: url('./img/mobile-hero.jpg');
+  }
+
+  .slide-image-2 {
+    content: url('./img/mobile-hero2.jpg');
+  }
+
+  .slide-image-3 {
+    content: url('./img/mobile-hero3.jpg');
   }
 
   .main__header-box {
-    padding: 24px;
+    top: 30%;
+    padding: 5%;
   }
 
   .main__title {
