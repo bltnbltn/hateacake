@@ -221,6 +221,8 @@ function updateQuantity(change) {
   quantity += change;
   quantity = Math.max(1, quantity); // quantity가 1보다 작아지지 않도록 보장
   quantityDisplay.textContent = quantity;
+  decreaseBtn.style.color =
+    quantity > 1 ? 'var(--text-color)' : 'var(--border1-color)';
 }
 
 // 모든 옵션이 선택되었는지 확인하는 함수
