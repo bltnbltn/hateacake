@@ -268,7 +268,7 @@ ul {
 }
 
 .slider-bar {
-  width: 0%;
+  width: 33.3%;
   height: 100%;
   background-color: #fff;
   transition: width 0.5s ease;
