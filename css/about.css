@@ -1,6 +1,6 @@
 /* ----------------------------------ABOUT PAGE----------------------------------  */
 .about {
-  padding: 120px 0px;
+  padding: 120px 0px 180px 0px;
 }
 .about__heading {
   color: var(--text-color);

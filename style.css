@@ -191,7 +191,7 @@ ul {
 .search-bar input[type='text']::placeholder {
   color: var(--gray-text-color);
   font-family: Pretendard Variable;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -278,7 +278,7 @@ ul {
 
 /* ------------------------------ Best Item */
 .best-product {
-  padding: 120px 0px;
+  padding: 120px 0px 180px 0px;
   color: var(--text-color);
 }
 

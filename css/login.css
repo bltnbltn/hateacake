@@ -2,7 +2,7 @@
   max-width: 500px;
   height: 500px;
   border: 1px solid var(--border1-color);
-  margin: 120px auto;
+  margin: 180px auto;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -30,24 +30,33 @@
   width: 350px;
   height: 50px;
   padding-left: 12px;
-  border: 1px solid var(--border2-color);
-  background: #fff;
+  border: none;
+  background: var(--border1-color);
   border-radius: 4px;
   font-size: 14px;
   font-family: Pretendard Variable;
   font-weight: 400;
 }
 
+label {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 8px; /* 이 부분을 추가합니다. */
+  display: block;
+  color: var(--text-color);
+}
+
 .email {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .password {
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .login__form input::placeholder {
   color: var(--gray-text-color);
+  font-w
 }
 
 .login__button {
@@ -61,7 +70,7 @@
   border: 0;
   color: var(--white-text-color);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
 }
 
