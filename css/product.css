@@ -30,22 +30,22 @@
 }
 
 .product-detail__title {
-  font-family: Pretendard Variable;
-  font-weight: 600;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   font-size: 24px;
   margin-bottom: 8px;
 }
 
 .product-detail__price {
-  font-family: Pretendard Variable;
-  font-weight: 300;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   font-size: 18px;
   margin-bottom: 30px;
 }
 
 .product-detail__description {
-  font-family: Pretendard Variable;
-  font-weight: 300;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   color: var(--text-color);
 }
 
@@ -61,23 +61,22 @@
 }
 
 .product-detail__ingredient-title {
-  font-family: Pretendard Variable;
-  font-weight: 600;
+  font-family: 'YgroSans-Medium';
   font-size: 14px;
   margin-top: 30px;
 }
 
 .product-detail__ingredient-list {
-  font-family: Pretendard Variable;
-  font-weight: 300;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   font-size: 14px;
   margin-top: 8px;
 }
 
 .product-detail__selection {
   padding-top: 24px;
-  font-family: Pretendard Variable;
-  font-weight: 400;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
 }
 
 .product-detail__select-size,
@@ -108,8 +107,8 @@
   font-size: 14px;
   padding-left: 12px;
   color: var(--text-color);
-  font-family: Pretendard Variable;
-  font-weight: 400;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   border-style: solid 1px;
   border-color: var(--border2-color);
   border-radius: 4px;
@@ -137,8 +136,14 @@ option[value=''][disabled] {
   display: none;
 }
 
+.material-icons {
+  transform: scale(0.8);
+}
+
 .product-detail__bag {
   font-size: 16px;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   color: var(--primary-color);
   font-weight: 500;
   background-color: #fff;
@@ -151,6 +156,8 @@ option[value=''][disabled] {
 }
 
 .product-detail__buy {
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   font-size: 16px;
   font-weight: 500;
   color: var(--white-text-color);
@@ -188,8 +195,8 @@ option[value=''][disabled] {
 }
 
 .product-detail__quantity {
-  font-family: Pretendard Variable;
-  font-weight: 400;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   font-size: 16px;
   width: 50px;
   text-align: center;
@@ -218,8 +225,8 @@ option[value=''][disabled] {
 }
 
 .product-detail__related-title {
-  font-family: Pretendard Variable;
-  font-weight: 600;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   font-size: 16px;
   margin-bottom: 30px;
   display: flex;
@@ -349,9 +356,5 @@ option[value=''][disabled] {
 
   .slide {
     padding: 0px 4px;
-  }
-
-  .material-icons {
-    transform: scale(0.8);
   }
 }

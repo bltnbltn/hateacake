@@ -20,24 +20,25 @@
 }
 
 .tab button {
-  font-size: 18px;
+  font-size: 16px;
   background-color: #ffffff;
   border: 0;
-  color: var(--gray-text-color);
-  padding: 8px 0px;
+  color: var(--text-color);
+  padding: 8px 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  border-bottom: 1px solid transparent;
-  margin: 0px 16px;
-}
-
-.tab button:hover {
-  border-bottom: 1px solid var(--text-color);
+  border: 1px solid #fff;
+  background-color: var(--border1-color);
+  border-radius: 20px;
+  margin: 0px 8px;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
 }
 
 .tab button.active {
-  border-bottom: 1px solid var(--text-color);
-  color: var(--text-color);
+  /* border-bottom: 1.5px solid var(--text-color); */
+  background-color: var(--primary-color);
+  color: var(--white-text-color);
 }
 
 .tabcontent {
@@ -48,11 +49,20 @@
   display: block;
 }
 
+.item-quantity {
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
+  font-size: 14px;
+  text-align: center;
+  color: var(--gray-text-color);
+  margin-top: 24px;
+}
+
 .product-item__grid {
   max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 16px;
   justify-content: center;
   margin: 60px auto;
 }
@@ -64,17 +74,16 @@
 }
 
 .product-item__name {
-  font-family: Pretendard Variable;
-  font-weight: 500;
-  font-size: 16px;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
+  font-size: 18px;
   margin: 8px 0px;
 }
 
 .product-item__price {
-  font-family: Pretendard Variable;
-  font-weight: 300;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   font-size: 16px;
-  letter-spacing: 0.5px;
   margin-bottom: 24px;
 }
 
@@ -121,7 +130,11 @@
 
 @media screen and (max-width: 767px) {
   .product {
-    padding: 30px 0px 60px 0px;
+    padding: 30px 16px 60px 16px;
+  }
+
+  .tab button {
+    margin: 0px 4px;
   }
 
   .product__heading h1 {
@@ -136,15 +149,5 @@
 
   .product-item__name {
     margin: 4px 0px;
-  }
-
-  /* 1행 좌측에만 패딩 주기 */
-  .product-item__item:nth-child(odd) {
-    padding-left: 16px;
-  }
-
-  /* 2행 우측에만 패딩 주기 */
-  .product-item__item:nth-child(even) {
-    padding-right: 16px;
   }
 }

@@ -1,6 +1,6 @@
 /* ----------------------------------ABOUT PAGE----------------------------------  */
 .about {
-  padding: 120px 0px 180px 0px;
+  padding: 120px 30px 180px 30px;
 }
 .about__heading {
   color: var(--text-color);
@@ -59,8 +59,8 @@
 }
 
 .about__body {
-  font-family: Pretendard Variable;
-  font-weight: 300;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   font-size: 16px;
   line-height: 160%;
 }

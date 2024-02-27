@@ -19,7 +19,7 @@
 
 /* ------------------------------ Colours */
 :root {
-  --text-color: #202020;
+  --text-color: #262626;
   --white-text-color: #fff;
   --gray-text-color: #9b9b9b;
   --border1-color: #f1f1f2;
@@ -60,7 +60,8 @@ ul {
 /* ------------------------------ Nav Bar */
 .navbar {
   display: flex;
-  font-family: Pretendard Variable;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   height: 120px;
   justify-content: space-between;
   align-items: center;
@@ -77,16 +78,14 @@ ul {
   align-items: center;
   width: 20px;
   height: 20px;
-  font-family: Pretendard variable;
+  font-family: 'YgroSans-Medium';
   font-size: 12px;
-  font-weight: 600;
   position: absolute;
   top: 1px;
   right: 1px;
   background-color: rgb(246, 105, 107);
   color: var(--white-text-color);
   border-radius: 50%;
-  padding: 5px 8px;
   z-index: 2;
 }
 
@@ -112,22 +111,28 @@ ul {
 
 .navbar__menu li {
   font-size: 16px;
-  font-family: Pretendard Variable;
-  margin: 0px 20px;
-  font-weight: 400;
+  margin: 0px 30px;
+  border-bottom: 2px solid transparent;
+  position: relative;
 }
 
 .menu-btn {
-  padding: 10px 20px; /* 일반 상태의 패딩 */
+  padding: 10px 0px; /* 일반 상태의 패딩 */
 }
 
-.navbar__menu li:hover {
+.navbar__menu li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
   background-color: var(--primary-color);
-  border-radius: 20px;
+  transition: width 0.3s ease; /* 변경되는 시간 조절 가능 */
 }
 
-.navbar__menu li:hover a {
-  color: var(--white-text-color);
+.navbar__menu li:hover::after {
+  width: 100%;
 }
 
 /* My order 메뉴 숨기기 */
@@ -190,7 +195,8 @@ ul {
 
 .search-bar input[type='text']::placeholder {
   color: var(--gray-text-color);
-  font-family: Pretendard Variable;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
   font-weight: 400;
   font-size: 14px;
 }
@@ -199,14 +205,14 @@ ul {
 
 .main__header-box {
   position: absolute;
-  min-width: 330px;
+  min-width: 340px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: auto; /* 너비를 자동으로 설정하여 유동적으로 크기 조정 */
   max-width: 90%; /* 부모 요소에 대해 최대 너비 설정 */
   height: auto;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   padding: 4%;
@@ -230,7 +236,7 @@ ul {
   width: 100%;
   flex: 0 0 auto;
   position: relative;
-  min-height: 500px;
+  min-height: 440px;
   max-height: 600px;
 }
 
@@ -242,14 +248,16 @@ ul {
 
 .main__title {
   font-family: 'YgroSans-Book';
+  font-weight: 100;
   font-size: 50px;
 }
 
 .main__description {
-  font-family: Pretendard Variable;
-  font-weight: 300;
+  font-family: 'YgroSans-Book';
+  max-width: 660px;
+  font-weight: 100;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 160%;
   padding-top: 16px;
 }
 
@@ -278,16 +286,19 @@ ul {
 
 /* ------------------------------ Best Item */
 .best-product {
-  padding: 120px 0px 180px 0px;
+  font-family: 'YgroSans-Book';
+  padding: 120px 30px 180px 30px;
   color: var(--text-color);
+  max-width: 1200px;
+  margin: auto;
 }
 
 .best-product__list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 46px;
   justify-content: center;
   margin: auto;
-  max-width: 1200px;
-  gap: 30px;
   padding: 0 16px;
 }
 
@@ -298,35 +309,73 @@ ul {
 }
 
 .best-product__heading h1 {
+  font-size: 32px;
   font-family: 'YgroSans-Book';
   font-weight: 100;
-  font-size: 32px;
   text-align: center;
   margin-bottom: 60px;
+  padding: 0 16px;
 }
 
 .best-product__name {
-  font-family: Pretendard Variable;
-  font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   margin: 8px 0px;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
 }
 
 .best-product__price {
-  font-family: Pretendard Variable;
-  font-weight: 300;
   font-size: 16px;
-  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
 }
 
+.best-product__item p {
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.view-more {
+  font-family: 'YgroSans-Book';
+  font-size: 14px;
+  text-align: center;
+  width: 130px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  border: 1.5px solid #fff;
+  margin: auto;
+  border-radius: 20px;
+  background-color: var(--border1-color);
+  margin-top: 40px;
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    var(--border1-color) 0%,
+    var(--border1-color) 50%,
+    var(--primary-color) 50%,
+    var(--primary-color) 100%
+  );
+  background-size: 200% 100%;
+  transition: background-position 0.5s;
+}
+.view-more:hover {
+  background-position: -100% 0;
+  color: var(--white-text-color);
+}
 /* ------------------------------ Footer */
 .footer {
   width: 100%;
   border-top: 1px solid var(--border1-color);
-  font-family: Pretendard Variable;
-  color: var(--gray-text-color);
+  font-family: 'YgroSans-Book';
+  font-weight: 100;
+  color: var(--text-color);
   font-weight: 300;
   font-size: 13px;
+  letter-spacing: 0.4px;
 }
 
 .footer__container {
@@ -340,11 +389,10 @@ ul {
 
 .footer__copyright {
   line-height: 150%;
-  color: var(--border2-color);
 }
 
 .bold {
-  font-weight: 600;
+  font-family: 'YgroSans-Medium';
   margin-right: 8px;
 }
 
@@ -405,17 +453,13 @@ ul {
     margin-top: 30px;
   }
 
-  .navbar__menu li:hover {
-    background-color: transparent;
-    border-radius: 0;
-  }
-
-  .navbar__menu li:hover a {
-    color: inherit; /* 링크 색상 상속 */
+  .navbar__menu li:hover::after {
+    width: 0%;
   }
 
   .navbar__menu li a {
     font-size: 18px;
+    padding: 8px 12px;
   }
 
   .navbar__menu.active {
@@ -448,31 +492,34 @@ ul {
   }
 
   /* ------------------------------ Main */
-  .slide-image-1 {
+  .slide-image-1 img {
     content: url('./img/mobile-hero.jpg');
   }
 
-  .slide-image-2 {
+  .slide-image-2 img {
     content: url('./img/mobile-hero2.jpg');
   }
 
-  .slide-image-3 {
+  .slide-image-3 img {
     content: url('./img/mobile-hero3.jpg');
   }
 
   .main__header-box {
     top: 30%;
-    padding: 5%;
+    padding: 30px 24px;
   }
 
   .main__title {
-    font-size: 32px;
+    font-size: 34px;
   }
 
   .main__description {
     font-size: 16px;
-    line-height: 150%;
     margin: auto;
+  }
+
+  .auto-slide {
+    height: 500px;
   }
 
   /* ------------------------------ Best Item */

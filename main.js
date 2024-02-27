@@ -146,6 +146,40 @@ function filterProductByCategory(category) {
 window.addEventListener('DOMContentLoaded', function () {
   document.getElementById('all-tab').click(); // "All" 탭 클릭 이벤트 발생
 });
+
+// Show item quantity----------------------------------------- //
+// 탭 클릭 이벤트 리스너를 설정합니다.
+document.getElementById('all-tab').addEventListener('click', function () {
+  updateItemImageCount('all');
+});
+
+document
+  .querySelector('.tab')
+  .querySelectorAll('.tablinks')
+  .forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      const category = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+      updateItemImageCount(category);
+    });
+  });
+
+// 초기 상태에서 전체 이미지 수를 표시합니다.
+updateItemImageCount('all');
+
+// 탭 클릭 시 이미지 갯수 업데이트 함수
+function updateItemImageCount(category) {
+  const itemQuantity = document.querySelector('.item-quantity');
+  let productItems;
+  if (category === 'all') {
+    productItems = document.querySelectorAll('.product-item__item');
+  } else {
+    productItems = document.querySelectorAll(
+      '.product-item__item[data-category="' + category + '"]'
+    );
+  }
+  itemQuantity.textContent = productItems.length + ' items';
+}
+
 // Add to Cart----------------------------------------- //
 // Add to Cart 버튼 요소를 가져옵니다.
 const addToCartButton = document.querySelector('.product-detail__bag');
@@ -251,6 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function positionSlides(index) {
     const offset = -index * slideWidth * 1;
     carousel.style.transform = `translateX(${offset}px)`;
+    carousel.style.transition = 'transform 0.5s ease'; // 부드러운 트랜지션 추가
   }
 
   function moveToSlide(index) {
@@ -294,6 +329,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     moveToSlide(newIndex);
+
     // prevButton의 SVG 아이콘 색상 변경
     const prevIcon = prevButton.querySelector('.material-icons');
     if (prevIcon) {

@@ -21,8 +21,7 @@
 }
 
 .login__form {
-  font-family: Pretendard Variable;
-  font-weight: 400;
+  font-family: 'YgroSans-Book';
 }
 
 .login__form input {
@@ -34,8 +33,7 @@
   background: var(--border1-color);
   border-radius: 4px;
   font-size: 14px;
-  font-family: Pretendard Variable;
-  font-weight: 400;
+  font-family: 'YgroSans-Book';
 }
 
 label {
@@ -56,7 +54,6 @@ label {
 
 .login__form input::placeholder {
   color: var(--gray-text-color);
-  font-w
 }
 
 .login__button {
@@ -105,6 +102,9 @@ label {
   align-items: center;
   font-size: 14px;
   margin: 16px 0px;
+}
+.forgot-password {
+  text-decoration: underline;
 }
 
 /* MOBILE, ~ 767 */
