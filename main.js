@@ -58,128 +58,6 @@ toggleBtn.addEventListener('click', function (e) {
   menu.classList.toggle('active');
 });
 
-// Hero Carousel--------------------------------------------- //
-
-document.addEventListener('DOMContentLoaded', function () {
-  let currentIndex = 0;
-  const slides = document.querySelectorAll('.auto-slide');
-  const totalSlides = slides.length;
-  const sliderBar = document.querySelector('.slider-bar');
-
-  function showSlide(index) {
-    if (index < 0) {
-      index = totalSlides - 1;
-    } else if (index >= totalSlides) {
-      index = 0;
-    }
-
-    const offset = -index * 100;
-    document.querySelector(
-      '.auto-slider-container'
-    ).style.transform = `translateX(${offset}%)`;
-    currentIndex = index;
-    updateSliderBar();
-  }
-
-  function nextSlide() {
-    showSlide(currentIndex + 1);
-  }
-
-  // 3초마다 다음 슬라이드 보여주기
-  setInterval(nextSlide, 3000);
-
-  // 슬라이드 막대 업데이트
-  function updateSliderBar() {
-    const percent =
-      ((currentIndex + 1) / totalSlides) * 100 * (3 / totalSlides); // 모바일 사이즈에서는 3분의 1 비율로 조정
-    sliderBar.style.width = `${percent}%`;
-  }
-});
-
-// Tab Bar--------------------------------------------- //
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-
-  // 탭 내용을 모두 숨김
-  tabcontent = document.getElementsByClassName('tabcontent');
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = 'none';
-  }
-
-  // 탭 버튼을 모두 초기화
-  tablinks = document.getElementsByClassName('tablinks');
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.remove('active');
-  }
-
-  // 클릭된 탭에 해당하는 내용을 표시
-  document.getElementById(tabName).style.display = 'block';
-  evt.currentTarget.classList.add('active');
-
-  // 해당 카테고리에 속하는 제품들만 표시
-  filterProductByCategory(tabName.toLowerCase()); // 카테고리를 소문자로 변환하여 전달
-}
-
-function filterProductByCategory(category) {
-  var items = document.getElementsByClassName('product-item__item');
-
-  // 모든 제품을 숨김
-  for (var i = 0; i < items.length; i++) {
-    items[i].style.display = 'none';
-  }
-
-  // 해당 카테고리에 속하는 제품만 표시
-  if (category === 'all') {
-    // 모든 제품을 표시
-    for (var i = 0; i < items.length; i++) {
-      items[i].style.display = 'block';
-    }
-  } else {
-    // 해당 카테고리에 속하는 제품만 표시
-    for (var i = 0; i < items.length; i++) {
-      if (items[i].getAttribute('data-category') === category) {
-        items[i].style.display = 'block';
-      }
-    }
-  }
-}
-window.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('all-tab').click(); // "All" 탭 클릭 이벤트 발생
-});
-
-// Show item quantity----------------------------------------- //
-// 탭 클릭 이벤트 리스너를 설정합니다.
-document.getElementById('all-tab').addEventListener('click', function () {
-  updateItemImageCount('all');
-});
-
-document
-  .querySelector('.tab')
-  .querySelectorAll('.tablinks')
-  .forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      const category = this.getAttribute('onclick').match(/'([^']+)'/)[1];
-      updateItemImageCount(category);
-    });
-  });
-
-// 초기 상태에서 전체 이미지 수를 표시합니다.
-updateItemImageCount('all');
-
-// 탭 클릭 시 이미지 갯수 업데이트 함수
-function updateItemImageCount(category) {
-  const itemQuantity = document.querySelector('.item-quantity');
-  let productItems;
-  if (category === 'all') {
-    productItems = document.querySelectorAll('.product-item__item');
-  } else {
-    productItems = document.querySelectorAll(
-      '.product-item__item[data-category="' + category + '"]'
-    );
-  }
-  itemQuantity.textContent = productItems.length + ' items';
-}
-
 // Add to Cart----------------------------------------- //
 // Add to Cart 버튼 요소를 가져옵니다.
 const addToCartButton = document.querySelector('.product-detail__bag');
@@ -239,6 +117,7 @@ const quantityDisplay = document.querySelector('.product-detail__quantity');
 const sizeSelect = document.getElementById('size'); // Size 선택 요소를 가져옵니다.
 const flavourSelect = document.getElementById('flavour'); // Flavour 선택 요소를 가져옵니다.
 const packingSelect = document.getElementById('packing'); // Packing 선택 요소를 가져옵니다.
+const dateSelect = document.getElementById('date'); // Date 선택 요소를 가져옵니다.
 
 let quantity = 1;
 
@@ -264,145 +143,41 @@ function isAllOptionsSelected() {
   return (
     sizeSelect.value !== '' &&
     flavourSelect.value !== '' &&
-    packingSelect.value !== ''
+    packingSelect.value !== '' &&
+    dateSelect.value !== '' // Date 선택 여부도 확인
   );
 }
 
-// Carousel--------------------------------------- //
+// Size Price Option--------------------------------------- //
 
-document.addEventListener('DOMContentLoaded', function () {
-  const carouselContainer = document.querySelector('.carousel-container');
-  const carousel = carouselContainer.querySelector('.carousel');
-  const slideGroups = Array.from(carousel.querySelectorAll('.slide-group'));
-  const prevButton = document.getElementById('prevBtn');
-  const nextButton = document.getElementById('nextBtn');
-  const dotsNav = document.querySelector('.dot-container');
-  const dots = Array.from(dotsNav.children);
+// 가격을 표시하는 요소
+const priceElement = document.querySelector('.product-detail__price');
 
-  const slideWidth = slideGroups[0].getBoundingClientRect().width;
-  let currentSlideIndex = 0;
+// 사이즈 선택 요소
+const sizeSelectPrice = document.getElementById('size'); // sizeSelect와 중복되지 않도록 수정
 
-  function positionSlides(index) {
-    const offset = -index * slideWidth * 1;
-    carousel.style.transform = `translateX(${offset}px)`;
-    carousel.style.transition = 'transform 0.5s ease'; // 부드러운 트랜지션 추가
+// 가격 설정
+let basePrice = 45.0;
+let priceIncrement = 5.0; // 각 사이즈에 대한 추가 금액
+
+// 사이즈가 변경될 때마다 호출되는 함수
+sizeSelectPrice.addEventListener('change', function () {
+  // 선택된 사이즈 가져오기
+  const selectedSize = sizeSelectPrice.value;
+
+  // 사이즈에 따른 가격 설정
+  switch (selectedSize) {
+    case 'Small':
+      priceElement.textContent = '$' + basePrice.toFixed(2);
+      break;
+    case 'Medium':
+      priceElement.textContent = '$' + (basePrice + priceIncrement).toFixed(2);
+      break;
+    case 'Large':
+      priceElement.textContent =
+        '$' + (basePrice + 2 * priceIncrement).toFixed(2);
+      break;
+    default:
+      priceElement.textContent = '$' + basePrice.toFixed(2);
   }
-
-  function moveToSlide(index) {
-    positionSlides(index);
-    currentSlideIndex = index;
-    updateDots(index);
-  }
-
-  function updateDots(index) {
-    dots.forEach((dot) => dot.classList.remove('dot--active'));
-    dots[index].classList.add('dot--active');
-  }
-
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', function () {
-      moveToSlide(index);
-
-      // prevButton의 SVG 아이콘 색상 변경
-      const prevIcon = prevButton.querySelector('.material-icons');
-      if (prevIcon) {
-        prevIcon.style.color = index === 0 ? '#f1f0f0' : '#101010';
-      }
-
-      // nextButton의 SVG 아이콘 색상 변경
-      const nextIcon = nextButton.querySelector('.material-icons');
-      if (nextIcon) {
-        nextIcon.style.color =
-          index === dots.length - 1 ? '#f1f0f0' : '#101010';
-      }
-    });
-  });
-
-  // PrevButton 클릭시
-  prevButton.addEventListener('click', function () {
-    let newIndex = currentSlideIndex - 1;
-    if (newIndex < 0) {
-      newIndex = slideGroups.length - 1;
-    }
-    if (newIndex === 1 && slideGroups.length < 3) {
-      return; // 이동하지 않음
-    }
-
-    moveToSlide(newIndex);
-
-    // prevButton의 SVG 아이콘 색상 변경
-    const prevIcon = prevButton.querySelector('.material-icons');
-    if (prevIcon) {
-      prevIcon.style.color = '#f1f0f0';
-    }
-
-    // nextButton의 SVG 아이콘 색상 변경
-    const nextIcon = nextButton.querySelector('.material-icons');
-    if (nextIcon) {
-      nextIcon.style.color = '#101010';
-    }
-  });
-
-  // nextButton 클릭시
-
-  nextButton.addEventListener('click', function () {
-    let newIndex = currentSlideIndex + 1;
-    if (newIndex >= slideGroups.length) {
-      newIndex = 1;
-    }
-    moveToSlide(newIndex);
-
-    // nextButton의 SVG 아이콘 색상 변경
-    const nextIcon = nextButton.querySelector('.material-icons');
-    if (nextIcon) {
-      nextIcon.style.color = '#f1f0f0';
-    }
-
-    // prevButton의 SVG 아이콘 색상 변경
-    const prevIcon = prevButton.querySelector('.material-icons');
-    if (prevIcon) {
-      prevIcon.style.color = '#101010';
-    }
-  });
-
-  // 초기에는 첫 번째 그룹의 이미지가 보이도록 설정
-  moveToSlide(0);
-
-  // 처음 그룹의 dot을 활성화
-  updateDots(0);
-
-  // Size Price Option--------------------------------------- //
-
-  // 가격을 표시하는 요소
-  const priceElement = document.querySelector('.product-detail__price');
-
-  // 사이즈 선택 요소
-  const sizeSelect = document.getElementById('size');
-
-  // 가격 설정
-  let basePrice = 45.0;
-  let priceIncrement = 5.0; // 각 사이즈에 대한 추가 금액
-
-  // 사이즈가 변경될 때마다 호출되는 함수
-  sizeSelect.addEventListener('change', function () {
-    // 선택된 사이즈 가져오기
-    const selectedSize = sizeSelect.value;
-
-    // 사이즈에 따른 가격 설정
-    switch (selectedSize) {
-      case 'Small':
-        priceElement.textContent = '$' + basePrice.toFixed(2);
-        break;
-      case 'Medium':
-        priceElement.textContent =
-          '$' + (basePrice + priceIncrement).toFixed(2);
-        break;
-      case 'Large':
-        priceElement.textContent =
-          '$' + (basePrice + 2 * priceIncrement).toFixed(2);
-        break;
-      default:
-        priceElement.textContent = '$' + basePrice.toFixed(2);
-    }
-  });
 });

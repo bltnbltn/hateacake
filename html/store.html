@@ -48,27 +48,60 @@
 
   </nav>
 
-  <div class="store__description">
-    <div class="store__cake-img">
-      <img src="../img/illust-cake.png" alt=""></a>
+  <div class="map-container">
+
+    <div class="store-info">
+      <h1>1011 Maple St</h1>
+      <p>TORONTO, ON M1A 2B3 </p>
+      <hr>
+      <div class="contact-info">
+        <h3>CONTACT</h3>
+        <p>+1 (416) 555-1234</p>
+      </div>
+      <div class="hours-info">
+        <h3>HOURS</h3>
+        <div class="day">
+          <p> Monday to Saturday</p>
+          <p>8am - 7pm</p>
+        </div>
+        <div class="day">
+          <p>Sunday</p>
+          <p>10am - 5pm</p>
+        </div>
+      </div>
+      <div class="email-info">
+        <h3>EMAIL</h3>
+        <p>hateacake001@gmail.com</p>
+      </div>
     </div>
-    <div class="store__heading">
-      <h1>Offline Store opening soon</h1>
-    </div>
+
+    <div id="map"></div>
+    <!-- Google 지도 API를 로드하는 스크립트 -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvzZQu5RE8HovD1JmS-mf1GTfzFWmGqsU&callback=initMap"
+      async defer></script>
   </div>
 
+  <div class="text-animation">
+    <p><span>
+        <sup>Let hate a cake lead you to sweetness. </sup>
+        <sup>Let hate a cake lead you to sweetness. </sup>
+        <sup>Let hate a cake lead you to sweetness. </sup>
+      </span></p>
+
+  </div>
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__copyright">
-        <p>Copyright 2022 hateacake</p>
+        <p>&copy; 2024 hateacake</p>
         <p>All Rights Reserved.</p>
       </div>
       <div class="footer__address">
-        <p>Maple Street, Toronto, ON M1A 2B3, Canada</p>
+        <p>1011 Maple St, Toronto, ON M1A 2B3, Canada</p>
         <p>+1 (416) 555-1234</p>
         <p><span class="bold">Mon - Sat</span>8am - 7pm<span class="hr">|</span><span class="bold">Sun</span>10am - 5pm
         </p>
       </div>
+
       <div class="footer__social-link">
         <a href="#"><img src="../icon/instagram.svg" alt="instagram icon"></a>
         <a href="#"><img src="../icon/facebook.svg" alt="facebook icon"></a>
@@ -78,6 +111,7 @@
   </footer>
 
   <script src="../main.js"></script>
+  <script src="../map.js"></script>
 </body>
 
 </html>

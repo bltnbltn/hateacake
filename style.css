@@ -112,7 +112,6 @@ ul {
 .navbar__menu li {
   font-size: 16px;
   margin: 0px 30px;
-  border-bottom: 2px solid transparent;
   position: relative;
 }
 
@@ -168,14 +167,17 @@ ul {
 }
 
 .clear-icon {
-  font-size: 18px;
+  width: 18px;
+  line-height: 18px;
+  font-size: 20px;
   text-align: center;
   position: absolute;
-  top: 6px;
   right: 16px;
   cursor: pointer;
   display: none;
-  color: var(--gray-text-color);
+  color: var(--white-text-color);
+  border-radius: 50%;
+  background-color: var(--border2-color);
 }
 
 .search-bar.active {
@@ -376,6 +378,7 @@ ul {
   font-weight: 300;
   font-size: 13px;
   letter-spacing: 0.4px;
+  color: var(--gray-text-color);
 }
 
 .footer__container {
@@ -397,7 +400,7 @@ ul {
 }
 
 .footer__address p {
-  margin: 12px 0px;
+  margin: 16px 0px;
 }
 
 .hr {

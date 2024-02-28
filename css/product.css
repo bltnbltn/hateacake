@@ -123,7 +123,7 @@
 }
 
 select:focus {
-  border: 3px solid var(--primary-color); /* 포커스 시 테두리 색상 변경 */
+  border: 2px solid var(--primary-color); /* 포커스 시 테두리 색상 변경 */
   outline: none; /* 기본 포커스 효과 제거 */
 }
 
