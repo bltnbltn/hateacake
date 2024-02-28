@@ -93,9 +93,24 @@ hr {
 }
 
 /* 말풍선 내부 텍스트 스타일 */
-.gm-style-iw div {
+.gm-style-iw {
   font-family: 'YgroSans-Medium';
   color: var(--text-color);
+  width: 120px;
+  height: 50px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gm-style-iw-d {
+  overflow: hidden;
+}
+
+.gm-style .gm-style-iw-c {
+  padding: 0px;
+  margin: auto;
 }
 
 .gm-ui-hover-effect {
