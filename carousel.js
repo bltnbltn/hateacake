@@ -1,5 +1,6 @@
+// Hero Carousel--------------------------------------------- //
+
 document.addEventListener('DOMContentLoaded', function () {
-  // Hero Carousel--------------------------------------------- //
   let currentIndex = 0;
   const slides = document.querySelectorAll('.auto-slide');
   const totalSlides = slides.length;
@@ -32,8 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
       ((currentIndex + 1) / totalSlides) * 100 * (3 / totalSlides); // 모바일 사이즈에서는 3분의 1 비율로 조정
     sliderBar.style.width = `${percent}%`;
   }
+});
 
-  // Related Item Carousel--------------------------------------- //
+// Related Item Carousel--------------------------------------- //
+
+document.addEventListener('DOMContentLoaded', function () {
   const carouselContainer = document.querySelector('.carousel-container');
   const carousel = carouselContainer.querySelector('.carousel');
   const slideGroups = Array.from(carousel.querySelectorAll('.slide-group'));
