@@ -31,7 +31,6 @@
 .right-cake {
   width: 66%;
   height: auto;
-
   border-top-right-radius: 100px;
 }
 
@@ -166,5 +165,13 @@ hr {
 
   .text-animation p {
     font-size: 32px; /* 텍스트 크기를 크게 설정합니다. */
+  }
+
+  .left-store {
+    border-top-left-radius: 50px;
+  }
+
+  .right-cake {
+    border-top-right-radius: 50px;
   }
 }
