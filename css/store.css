@@ -4,7 +4,7 @@
   font-weight: 100;
   display: flex;
   max-width: 1200px;
-  padding: 120px 30px;
+  padding: 120px 80px 180px 80px;
   margin: auto;
   justify-content: center;
   align-items: center;
@@ -12,6 +12,27 @@
 
 .map-container span {
   margin-right: 100px;
+}
+
+.store-photo {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.left-store {
+  width: 33%;
+  height: auto;
+  border-top-left-radius: 100px;
+}
+
+.right-cake {
+  width: 66%;
+  height: auto;
+
+  border-top-right-radius: 100px;
 }
 
 #map {
@@ -23,8 +44,12 @@
 .store-info {
   width: 80%;
   height: 50%;
-  margin-left: 30px;
-  padding: 60px;
+  margin-right: 60px;
+}
+
+.store-info h1 {
+  font-family: 'YgroSans-Medium';
+  font-weight: 100;
 }
 
 .store-info h3 {
@@ -105,7 +130,7 @@ hr {
 }
 
 .gm-style-iw-d {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .gm-style .gm-style-iw-c {
@@ -121,9 +146,10 @@ hr {
 
 @media screen and (max-width: 767px) {
   .map-container {
-    padding: 0 16px;
+    padding: 0 24px;
     display: flex;
     flex-direction: column-reverse; /* 블록 요소의 순서를 거꾸로 표시합니다. */
+    margin-bottom: 30px;
   }
 
   #map {
