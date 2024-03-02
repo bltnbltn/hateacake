@@ -530,7 +530,7 @@ ul {
   .best-product {
     width: 80%;
     margin: auto;
-    padding: 60px 0px;
+    padding: 60px 0px 80px 0px;
   }
 
   .best-product__list {
