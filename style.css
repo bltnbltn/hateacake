@@ -534,7 +534,8 @@ ul {
   }
 
   .best-product__list {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   .best-product__item {
